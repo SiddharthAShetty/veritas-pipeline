@@ -1,0 +1,44 @@
+{
+  "clinic_id": "wellness_diagnostics",
+  "clinic_name": "Wellness Diagnostics",
+  "source_system": "vendor_ocr_envelope_v1",
+  "match": {"strategy": "envelope_shape", "required_keys": ["traceId", "statusCode", "data"]},
+  "date_format": "%d-%m-%Y",
+  "envelope": {
+    "trace_id_path": "traceId",
+    "document_id_path": "data.documentId",
+    "correlation_id_path": "data.correlationId",
+    "meta_details_path": "data.metaDetails",
+    "blocks_path": "data.responseDetails",
+    "record_type_field": "classifier",
+    "record_type_map": {
+      "lab_report": "lab_report",
+      "discharge_summary": "discharge_summary"
+    }
+  },
+  "lab_report": {
+    "basic_info_path": "data.basic_info",
+    "demographics_field_map": {
+      "uhid": "uhid",
+      "age": "age",
+      "gender": "gender",
+      "hospital_name": "lab_or_hospital_name",
+      "patient_name": "patient_name",
+      "bill_date": "bill_date",
+      "reports_date": "reports_date"
+    },
+    "rows_path": "data.report_details",
+    "row_field_map": {
+      "test_name": "test_name",
+      "result_text": "result",
+      "unit_original": "unit",
+      "range_text": "range",
+      "test_analytics": "test_analytics",
+      "page_number": "page_no"
+    },
+    "skip_rows_where": {"test_name": "test_name", "result": "result"}
+  },
+  "discharge_summary": null,
+  "dedup_key_fields": ["document_id", "correlation_id"],
+  "notes": "Same platform envelope as apollo_diagnostics but a different clinic (identified by GCS folder path, not by JSON content -- see FR-1.1/Assumptions). Ships noisier data on purpose: composite age strings, alternate unit spellings (mil/cu.cm), missing gender."
+}

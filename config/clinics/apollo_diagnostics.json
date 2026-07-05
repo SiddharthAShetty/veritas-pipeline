@@ -1,0 +1,69 @@
+{
+  "clinic_id": "apollo_diagnostics",
+  "clinic_name": "Apollo Diagnostics",
+  "source_system": "vendor_ocr_envelope_v1",
+  "match": {"strategy": "envelope_shape", "required_keys": ["traceId", "statusCode", "data"]},
+  "date_format": "%d/%m/%Y",
+  "envelope": {
+    "trace_id_path": "traceId",
+    "document_id_path": "data.documentId",
+    "correlation_id_path": "data.correlationId",
+    "meta_details_path": "data.metaDetails",
+    "blocks_path": "data.responseDetails",
+    "record_type_field": "classifier",
+    "record_type_map": {
+      "lab_report": "lab_report",
+      "discharge_summary": "discharge_summary"
+    }
+  },
+  "lab_report": {
+    "basic_info_path": "data.basic_info",
+    "demographics_field_map": {
+      "uhid": "uhid",
+      "age": "age",
+      "gender": "gender",
+      "hospital_name": "lab_or_hospital_name",
+      "patient_name": "patient_name",
+      "bill_date": "bill_date",
+      "reports_date": "reports_date"
+    },
+    "rows_path": "data.report_details",
+    "row_field_map": {
+      "test_name": "test_name",
+      "result_text": "result",
+      "unit_original": "unit",
+      "range_text": "range",
+      "test_analytics": "test_analytics",
+      "page_number": "page_no"
+    },
+    "skip_rows_where": {"test_name": "test_name", "result": "result"}
+  },
+  "discharge_summary": {
+    "root_path": "data",
+    "field_map": {
+      "patient_name": "patientName",
+      "age": "age",
+      "gender": "gender",
+      "hospital_name": "hospitalName",
+      "hospital_address": "hospitalAddress",
+      "doctor_name": "doctorName",
+      "ward": "ward",
+      "admission_date": "admissionDate",
+      "discharge_date": "dischargeDate",
+      "diagnosis": "diagnosis",
+      "brief_history": "briefHistory",
+      "general_examinations": "generalExaminations",
+      "course_during_hospitalisation": "courseDuringHospitalisation",
+      "recommendations": "recommendations",
+      "post_discharge_advice": "postDischargeAdvice",
+      "medicine_injections_investigation": "medicineInjectionsInvestigation"
+    },
+    "medications_path": "data.dischargeMedications",
+    "medication_field_map": {
+      "medicine": "medicine",
+      "dose": "dose",
+      "frequency": "frequency"
+    }
+  },
+  "dedup_key_fields": ["document_id", "correlation_id"]
+}

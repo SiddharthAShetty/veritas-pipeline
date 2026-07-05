@@ -1,0 +1,986 @@
+{
+  "_meta": {
+    "description": "Canonical test-name dictionary. Each entry defines the canonical name Veritas uses downstream, the expected value type, canonical unit, and every known alias/variant a clinic might send. Onboarding a new clinic's naming convention = adding aliases here, no code change (NFR-2.1).",
+    "matching_strategy": "1) normalize incoming test_name (lowercase, strip punctuation/whitespace, strip parenthetical method notes) 2) exact match against aliases 3) fall back to fuzzy match (token-set ratio >= fuzzy_threshold) against canonical_name + aliases 4) unresolved names are logged for manual dictionary curation, not silently dropped",
+    "fuzzy_threshold": 90,
+    "source": "Derived from Clinical_name_standardization.xlsx (reviewer-curated canonical mappings) plus variants observed directly in sample clinic JSON files"
+  },
+  "tests": [
+    {
+      "canonical_name": "Hemoglobin",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "g/dL",
+      "aliases": [
+        "HAEMOGLOBIN",
+        "Haemoglobin",
+        "haemoglobin",
+        "aemoglobin",
+        "Hb",
+        "HGB",
+        "HEMOGLOBIN"
+      ]
+    },
+    {
+      "canonical_name": "Total Leucocyte Count",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "cells/cumm",
+      "aliases": [
+        "TOTAL WBC COUNT",
+        "Total WBC Count",
+        "WBC COUNT",
+        "White Blood Cell Count",
+        "TLC",
+        "Total Leucocyte Count (TLC)"
+      ]
+    },
+    {
+      "canonical_name": "Serum Creatinine",
+      "category": "renal",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "CREATININE, SERUM",
+        "SERUM CREATININE",
+        "Serum Creatinine",
+        "CREATININE",
+        "Creatinine"
+      ]
+    },
+    {
+      "canonical_name": "Sodium",
+      "category": "electrolytes",
+      "value_type": "numeric",
+      "unit_canonical": "mmol/L",
+      "aliases": [
+        "Na+",
+        "SODIUM",
+        "Sodium",
+        "Sodium (Na+)"
+      ]
+    },
+    {
+      "canonical_name": "Potassium",
+      "category": "electrolytes",
+      "value_type": "numeric",
+      "unit_canonical": "mmol/L",
+      "aliases": [
+        "K+",
+        "POTASSIUM",
+        "Potassium",
+        "Potassium (K+)"
+      ]
+    },
+    {
+      "canonical_name": "Chloride",
+      "category": "electrolytes",
+      "value_type": "numeric",
+      "unit_canonical": "mmol/L",
+      "aliases": [
+        "CI-",
+        "Chloride (CI-)",
+        "Cl-",
+        "Chloride",
+        "Cl",
+        "Chloride",
+        "Cl-",
+        "Serum Chloride"
+      ]
+    },
+    {
+      "canonical_name": "Red Blood Cell Count",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "million/cumm",
+      "aliases": [
+        "RBC",
+        "RBC COUNT",
+        "Red Blood Cell Count"
+      ]
+    },
+    {
+      "canonical_name": "Platelet Count",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "lakhs/cumm",
+      "aliases": [
+        "PLATELET COUNT",
+        "Platelet Count"
+      ]
+    },
+    {
+      "canonical_name": "Albumin",
+      "category": "biochemistry",
+      "value_type": "numeric",
+      "unit_canonical": "g/dL",
+      "aliases": [
+        "ALBUMIN",
+        "ALBUMIN, SERUM",
+        "Albumin"
+      ]
+    },
+    {
+      "canonical_name": "Hematocrit",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "HAEMATOCRIT",
+        "Haematocrit (PCV)",
+        "Packed Cell Volume (PCV)",
+        "HEMATOCRIT",
+        "PCV",
+        "Haematocrit HCT",
+        "HAEMATOCRIT HCT"
+      ]
+    },
+    {
+      "canonical_name": "Procalcitonin",
+      "category": "biochemistry",
+      "value_type": "numeric",
+      "unit_canonical": "ng/mL",
+      "aliases": [
+        "PROCALCITONIN",
+        "PROCALCITONIN (PCT)"
+      ]
+    },
+    {
+      "canonical_name": "C-Reactive Protein",
+      "category": "biochemistry",
+      "value_type": "numeric",
+      "unit_canonical": "mg/L",
+      "aliases": [
+        "C-REACTIVE PROTEIN (CRP)",
+        "CRP",
+        "C-REACTIVE PROTEIN",
+        "CRP-QUANTITATIVE"
+      ]
+    },
+    {
+      "canonical_name": "Alanine Aminotransferase",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "U/L",
+      "aliases": [
+        "ALANINE AMINOTRANSFERASE",
+        "ALT (SGPT)",
+        "SGPT",
+        "ALT",
+        "Alanine Transaminase (ALT)",
+        "ALT",
+        "SGPT, ALT (Alanine Transaminase)",
+        "Alanine Transaminase",
+        "Alanine Aminotransferase (ALT)"
+      ]
+    },
+    {
+      "canonical_name": "Complete Blood Count",
+      "category": "panel",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "CBC",
+        "COMPLETE BLOOD COUNT (CBC)",
+        "COMPLETE BLOOD COUNT (CBC) , WHOLE BLOOD EDTA"
+      ]
+    },
+    {
+      "canonical_name": "Complete Blood Count",
+      "category": "panel",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "CBC",
+        "COMPLETE BLOOD COUNT (CBC)",
+        "COMPLETE BLOOD COUNT (CBC) , WHOLE BLOOD EDTA"
+      ]
+    },
+    {
+      "canonical_name": "Aspartate Aminotransferase",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "U/L",
+      "aliases": [
+        "ASPARTATE AMINOTRANSFERASE",
+        "AST (SGOT)",
+        "SGOT",
+        "AST",
+        "Aspartate Transaminase (SGOT, AST)",
+        "Aspartate Transaminase (SGOT, HAST)"
+      ]
+    },
+    {
+      "canonical_name": "Uric Acid",
+      "category": "renal",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "URIC ACID",
+        "URIC ACID, SERUM",
+        "Uric Acid"
+      ]
+    },
+    {
+      "canonical_name": "Calcium",
+      "category": "electrolytes",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "CALCIUM",
+        "Ca2+ (Calcium)",
+        "Serum Calcium"
+      ]
+    },
+    {
+      "canonical_name": "Estimated Glomerular Filtration Rate",
+      "category": "renal",
+      "value_type": "numeric",
+      "unit_canonical": "mL/min/1.73m2",
+      "aliases": [
+        "FILTRATION RATE",
+        "eGFR - ESTIMATED GLOMERULAR FILTRATION RATE",
+        "eGFR"
+      ]
+    },
+    {
+      "canonical_name": "Urea Nitrogen",
+      "category": "renal",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "BLOOD UREA NITROGEN",
+        "UREA",
+        "Blood Urea",
+        "BUN"
+      ]
+    },
+    {
+      "canonical_name": "Neutrophils",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "Neutrophil",
+        "Neutrophils"
+      ]
+    },
+    {
+      "canonical_name": "Lymphocytes",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "Lymphocyte",
+        "Lymphocytes"
+      ]
+    },
+    {
+      "canonical_name": "Eosinophils",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "Eosinophils",
+        "Eosinophil"
+      ]
+    },
+    {
+      "canonical_name": "Monocytes",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "Monocytes",
+        "Monocyte"
+      ]
+    },
+    {
+      "canonical_name": "Basophils",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "Basophils",
+        "Basophil"
+      ]
+    },
+    {
+      "canonical_name": "Mean Cell Volume",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "fL",
+      "aliases": [
+        "Mean Cell Volume (MCV)",
+        "MCV",
+        "Mean Corp Volume MCV",
+        "MEAN CORP VOLUME MCV"
+      ]
+    },
+    {
+      "canonical_name": "Mean Corpuscular Hemoglobin",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "pg",
+      "aliases": [
+        "MCH"
+      ]
+    },
+    {
+      "canonical_name": "Mean Corpuscular Hemoglobin Concentration",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "g/dL",
+      "aliases": [
+        "MCHC",
+        "Mean Corp Hb Conc MCHC",
+        "MEAN CORP HB CONC MCHC"
+      ]
+    },
+    {
+      "canonical_name": "Red Cell Distribution Width",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "RDW - CV",
+        "RDW-CV",
+        "RDW"
+      ]
+    },
+    {
+      "canonical_name": "Mean Platelet Volume",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "fL",
+      "aliases": [
+        "MPV (Mean Platelet Volume)",
+        "MPV"
+      ]
+    },
+    {
+      "canonical_name": "Total Bilirubin",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "Bilirubin Total",
+        "Serum Bilirubin (Total, Direct & Indirect)",
+        "Total Bilirubin"
+      ]
+    },
+    {
+      "canonical_name": "Direct Bilirubin",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "Bilirubin Direct",
+        "Direct Bilirubin",
+        "BILIRUBIN CONJUGATED (DIRECT)",
+        "BILIRUBIN CONJUGATED(DIRECT)",
+        "Direct Bilirubin",
+        "Bilirubin Direct"
+      ]
+    },
+    {
+      "canonical_name": "Indirect Bilirubin",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "Bilirubin Indirect",
+        "Indirect Bilirubin"
+      ]
+    },
+    {
+      "canonical_name": "Alkaline Phosphatase",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "U/L",
+      "aliases": [
+        "Alkaline Phosphatase (ALP)",
+        "ALP"
+      ]
+    },
+    {
+      "canonical_name": "Total Protein",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "g/dL",
+      "aliases": [
+        "Total protein",
+        "Total Protein",
+        "PROTEIN, TOTAL",
+        "PROTEIN,TOTAL"
+      ]
+    },
+    {
+      "canonical_name": "Globulin",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "g/dL",
+      "aliases": [
+        "Globulin (Calculated)",
+        "Globulin"
+      ]
+    },
+    {
+      "canonical_name": "Albumin Globulin Ratio",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "ratio",
+      "aliases": [
+        "Albumin/Globulin Ratio (Calculated)",
+        "Albumin/Globulin Ratio",
+        "A/G Ratio"
+      ]
+    },
+    {
+      "canonical_name": "Gamma Glutamyl Transpeptidase",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "U/L",
+      "aliases": [
+        "GGT (Gamma Glutamyl Transpeptidase)",
+        "GGT"
+      ]
+    },
+    {
+      "canonical_name": "Phosphorus",
+      "category": "electrolytes",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "Phosphorus Serum",
+        "Phosphorus",
+        "PHOSPHORUS, INORGANIC"
+      ]
+    },
+    {
+      "canonical_name": "Temperature",
+      "category": "vitals",
+      "value_type": "numeric",
+      "unit_canonical": "degF",
+      "aliases": [
+        "Temp",
+        "Temp.",
+        "Temperature"
+      ]
+    },
+    {
+      "canonical_name": "Pulse",
+      "category": "vitals",
+      "value_type": "numeric",
+      "unit_canonical": "per_min",
+      "aliases": [
+        "Pulse",
+        "Heart Rate",
+        "PR"
+      ]
+    },
+    {
+      "canonical_name": "Blood Pressure",
+      "category": "vitals",
+      "value_type": "composite",
+      "unit_canonical": "mmHg",
+      "aliases": [
+        "BP",
+        "Blood Pressure"
+      ]
+    },
+    {
+      "canonical_name": "Random Blood Sugar",
+      "category": "vitals",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "RBS",
+        "Random Blood Sugar"
+      ]
+    },
+    {
+      "canonical_name": "Oxygen Saturation",
+      "category": "vitals",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "SPO2",
+        "SpO2",
+        "Oxygen Saturation"
+      ]
+    },
+    {
+      "canonical_name": "Respiratory Rate",
+      "category": "vitals",
+      "value_type": "numeric",
+      "unit_canonical": "per_min",
+      "aliases": [
+        "Resp. Rate",
+        "Respiratory Rate"
+      ]
+    },
+    {
+      "canonical_name": "Weight",
+      "category": "vitals",
+      "value_type": "numeric",
+      "unit_canonical": "kg",
+      "aliases": [
+        "Weight"
+      ]
+    },
+    {
+      "canonical_name": "Urine Routine Microscopy",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "urine R/M",
+        "Urine routine and microscopic examination",
+        "Urine routine and microscopic  examination"
+      ]
+    },
+    {
+      "canonical_name": "Red Cell Distribution Width SD",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "fL",
+      "aliases": [
+        "RDW-SD",
+        "RDW - SD",
+        "R.D.W"
+      ]
+    },
+    {
+      "canonical_name": "Platelet Large Cell Ratio",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "P-LCR",
+        "PLCR"
+      ]
+    },
+    {
+      "canonical_name": "Absolute Leucocyte Count",
+      "category": "hematology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "ABSOLUTE LEUCOCYTE COUNT",
+        "Corrected TLC",
+        "CORRECTED TLC"
+      ]
+    },
+    {
+      "canonical_name": "AST ALT Ratio",
+      "category": "liver",
+      "value_type": "numeric",
+      "unit_canonical": "ratio",
+      "aliases": [
+        "AST (SGOT) / ALT (SGPT) RATIO (DE RITIS)",
+        "AST (SGOT) / ALT (SGPT) RATIO (DERITIS)",
+        "AST(SGOT)/ALT(SGPT)RATIO(DERITIS)",
+        "De Ritis Ratio"
+      ]
+    },
+    {
+      "canonical_name": "Neutrophil Lymphocyte Ratio",
+      "category": "hematology",
+      "value_type": "numeric",
+      "unit_canonical": "ratio",
+      "aliases": [
+        "Neutrophil lymphocyte ratio (NLR)",
+        "NLR"
+      ]
+    },
+    {
+      "canonical_name": "Amylase",
+      "category": "biochemistry",
+      "value_type": "numeric",
+      "unit_canonical": "U/L",
+      "aliases": [
+        "AMYLASE"
+      ]
+    },
+    {
+      "canonical_name": "Lipase",
+      "category": "biochemistry",
+      "value_type": "numeric",
+      "unit_canonical": "U/L",
+      "aliases": [
+        "LIPASE,SERUM",
+        "LIPASE, SERUM",
+        "LIPASE"
+      ]
+    },
+    {
+      "canonical_name": "Widal Test",
+      "category": "serology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "WIDAL TEST",
+        "WIDAL TEST (SLIDE METHOD)",
+        "S.PARATYPHI A 'H' , SERUM",
+        "S.PARATYPHI B 'H' , SERUM",
+        "SALMONELLA TYPHI 'H' , SERUM",
+        "SALMONELLA TYPHI O` , SERUM"
+      ]
+    },
+    {
+      "canonical_name": "Dengue NS1 Antigen",
+      "category": "serology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "DENGUE NS 1",
+        "DENGUE NS1"
+      ]
+    },
+    {
+      "canonical_name": "Typhidot IgG IgM",
+      "category": "serology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "TYPHI DOT IGG & IGM",
+        "TYPHIDOT IgG AND IgM , SERUM",
+        "TYPHIDOT IgG AND IgM, SERUM"
+      ]
+    },
+    {
+      "canonical_name": "Malaria Antigen",
+      "category": "serology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "MALARIA FALCIPARUM ANTIGEN , WHOLE BLOOD EDTA",
+        "MALARIA VIVAX ANTIGEN , WHOLE BLOOD EDTA",
+        "PERIPHERAL SMEAR FOR MALARIAL PARASITE (MP) , WHOLE BLOOD EDTA"
+      ]
+    },
+    {
+      "canonical_name": "Blood Culture",
+      "category": "microbiology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "CULTURE AND SENSITIVITY - AEROBIC (BLOOD)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Specific Gravity",
+      "category": "urine",
+      "value_type": "numeric",
+      "unit_canonical": "ratio",
+      "aliases": [
+        "SP. GRAVITY",
+        "SPECIFIC GRAVITY(automated multistrips.colour reaction/Pka change)"
+      ]
+    },
+    {
+      "canonical_name": "Urine pH",
+      "category": "urine",
+      "value_type": "numeric",
+      "unit_canonical": "pH",
+      "aliases": [
+        "pH(automated multistrips double indicator method)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Pus Cells",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": "/hpf",
+      "aliases": [
+        "PUS CELLS(light microscopy)/hpf",
+        "Pus Cells"
+      ]
+    },
+    {
+      "canonical_name": "Urine Epithelial Cells",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "EPITHELIAL CELLS(light microscopy)",
+        "EPITHELIAL CELLS"
+      ]
+    },
+    {
+      "canonical_name": "Urine Red Blood Cells",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "RED BLOOD CELLS(light microscopy)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Casts",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "CASTS(light microscopy)",
+        "CASTS"
+      ]
+    },
+    {
+      "canonical_name": "Urine Crystals",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "CRYSTALS(light microscopy)",
+        "CRYSTALS"
+      ]
+    },
+    {
+      "canonical_name": "Urine Colour",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "COLOUR(visual observation)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Transparency",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "TRANSPARENCY (APPEARANCE)( visual observation)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Volume",
+      "category": "urine",
+      "value_type": "numeric",
+      "unit_canonical": "mL",
+      "aliases": [
+        "VOLUME(visual observation)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Bilirubin",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "URINE BILIRUBIN",
+        "BILIRUBIN(automated multistrips,fouchets method)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Ketones",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "URINE KETONES (RANDOM)",
+        "KETONE BODIES(automated (multistrips.rotheras method)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Blood",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "BLOOD(automated multistrips ,bencidine method)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Glucose",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "GLUCOSE(automated multistrips.(enzyme 0 reaction) benedicts method",
+        "GLUCOSE"
+      ]
+    },
+    {
+      "canonical_name": "Urine Protein",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "PROTEIN (ALBUMIN)automated(multistrips)protein error of pH).sulphosalicylic acid method"
+      ]
+    },
+    {
+      "canonical_name": "Urine Urobilinogen",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "UROBILINOGEN(automated multistrips,ehrlichs aldehyde method)"
+      ]
+    },
+    {
+      "canonical_name": "Urine Nitrite",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "NITRITE"
+      ]
+    },
+    {
+      "canonical_name": "Urine Leucocyte Esterase",
+      "category": "urine",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "LEUCOCYTE ESTERASE"
+      ]
+    },
+    {
+      "canonical_name": "Ultrasound Whole Abdomen",
+      "category": "imaging",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "USG W/A",
+        "USG WHOLE ABDOMEN",
+        "ULTRASOUND WHOLE ABDOMEN"
+      ]
+    },
+    {
+      "canonical_name": "Fasting Blood Sugar",
+      "category": "diabetes",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "FBS",
+        "Fasting Blood Sugar",
+        "Fasting Blood Glucose",
+        "FASTING BLOOD SUGAR"
+      ]
+    },
+    {
+      "canonical_name": "Post Prandial Blood Sugar",
+      "category": "diabetes",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "PPBS",
+        "PP Blood Sugar",
+        "Post Prandial Blood Sugar",
+        "POST PRANDIAL BLOOD SUGAR"
+      ]
+    },
+    {
+      "canonical_name": "HbA1c",
+      "category": "diabetes",
+      "value_type": "numeric",
+      "unit_canonical": "%",
+      "aliases": [
+        "HbA1c",
+        "HBA1C",
+        "Glycated Hemoglobin",
+        "Hemoglobin A1c"
+      ]
+    },
+    {
+      "canonical_name": "Total Cholesterol",
+      "category": "lipid",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "CHOLESTEROL",
+        "Total Cholesterol",
+        "Serum Cholesterol"
+      ]
+    },
+    {
+      "canonical_name": "Triglycerides",
+      "category": "lipid",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "TRIGLYCERIDES",
+        "Triglycerides",
+        "TG"
+      ]
+    },
+    {
+      "canonical_name": "HDL Cholesterol",
+      "category": "lipid",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "HDL",
+        "HDL Cholesterol",
+        "HDL-C"
+      ]
+    },
+    {
+      "canonical_name": "LDL Cholesterol",
+      "category": "lipid",
+      "value_type": "numeric",
+      "unit_canonical": "mg/dL",
+      "aliases": [
+        "LDL",
+        "LDL Cholesterol",
+        "LDL-C"
+      ]
+    },
+    {
+      "canonical_name": "Thyroid Stimulating Hormone",
+      "category": "thyroid",
+      "value_type": "numeric",
+      "unit_canonical": "uIU/mL",
+      "aliases": [
+        "TSH",
+        "Thyroid Stimulating Hormone",
+        "THYROID STIMULATING HORMONE"
+      ]
+    },
+    {
+      "canonical_name": "Free T4",
+      "category": "thyroid",
+      "value_type": "numeric",
+      "unit_canonical": "ng/dL",
+      "aliases": [
+        "FT4",
+        "Free T4"
+      ]
+    },
+    {
+      "canonical_name": "Free T3",
+      "category": "thyroid",
+      "value_type": "numeric",
+      "unit_canonical": "pg/mL",
+      "aliases": [
+        "FT3",
+        "Free T3"
+      ]
+    },
+    {
+      "canonical_name": "HBsAg",
+      "category": "serology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "HBsAg",
+        "HEPATITIS B SURFACE ANTIGEN"
+      ]
+    },
+    {
+      "canonical_name": "HIV",
+      "category": "serology",
+      "value_type": "text",
+      "unit_canonical": null,
+      "aliases": [
+        "HIV",
+        "HIV I & II",
+        "HIV 1 & 2"
+      ]
+    }
+  ]
+}

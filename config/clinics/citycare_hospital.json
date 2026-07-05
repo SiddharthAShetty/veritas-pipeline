@@ -1,0 +1,39 @@
+{
+  "clinic_id": "citycare_hospital",
+  "clinic_name": "CityCare Hospital",
+  "source_system": "citycare_meta_v1",
+  "match": {"strategy": "envelope_shape", "required_keys": ["meta", "labResults"]},
+  "date_format": "%m/%d/%Y",
+  "envelope": {
+    "trace_id_path": "meta.txnId",
+    "document_id_path": "meta.reportId",
+    "correlation_id_path": "meta.encounterId",
+    "blocks_path": null,
+    "record_type_field": null,
+    "record_type_map": {"default": "lab_report"}
+  },
+  "lab_report": {
+    "basic_info_path": "meta",
+    "demographics_field_map": {
+      "uhid": "mrn",
+      "age": "patientAge",
+      "gender": "patientGender",
+      "hospital_name": "facility",
+      "patient_name": "patientFullName",
+      "bill_date": "billedOn",
+      "reports_date": "resultedOn"
+    },
+    "rows_path": "labResults",
+    "row_field_map": {
+      "test_name": "analyte",
+      "result_text": "finding",
+      "unit_original": "units",
+      "range_text": "refRange",
+      "test_analytics": "interpretation",
+      "page_number": null
+    },
+    "skip_rows_where": {}
+  },
+  "discharge_summary": null,
+  "dedup_key_fields": ["document_id", "correlation_id"]
+}

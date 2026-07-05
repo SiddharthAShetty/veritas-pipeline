@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Record Inspector</h1>
+<p class="subtitle">Search by document ID, UHID, or patient name to see raw JSON alongside the standardised output.</p>
+
+<form class="filter-bar" method="get">
+  <input type="text" name="q" placeholder="e.g. DOC01BL67643..." value="{{ q }}" style="width:320px;">
+  <button type="submit">Search</button>
+</form>
+
+{% if q %}
+<div class="card">
+  {% if results %}
+  <table>
+    <tr><th>Document</th><th>Clinic</th><th>Patient</th><th>UHID</th><th>Hospital</th></tr>
+    {% for r in results %}
+    <tr>
+      <td><a href="/records/{{ r['document_id'] }}" class="mono">{{ r['document_id'] }}</a></td>
+      <td>{{ r['clinic_id'] }}</td>
+      <td>{{ r['patient_name'] }}</td>
+      <td class="mono">{{ r['uhid'] }}</td>
+      <td>{{ r['hospital_name'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p class="subtitle" style="margin:0;">No matches for "{{ q }}".</p>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

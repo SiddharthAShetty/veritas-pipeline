@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Clinic Quality Summary</h1>
+<p class="subtitle">Per-clinic ingestion &amp; data-quality stats, cumulative across all runs</p>
+
+<div class="card">
+  <table>
+    <tr>
+      <th>Clinic</th><th>Files seen</th><th>Failed</th><th>Dupes suppressed</th>
+      <th>Rows loaded</th><th>Unresolved test names</th><th>Invalid rows</th><th>Outlier rows</th>
+    </tr>
+    {% for r in rows %}
+    <tr>
+      <td>{{ r['clinic_id'] }}</td>
+      <td class="mono">{{ r['files_seen'] }}</td>
+      <td class="mono" style="color: {{ 'var(--danger)' if r['files_failed'] else 'inherit' }}">{{ r['files_failed'] }}</td>
+      <td class="mono">{{ r['duplicates_suppressed'] }}</td>
+      <td class="mono">{{ r['rows_loaded'] }}</td>
+      <td class="mono" style="color: {{ 'var(--warn)' if r['unresolved_test_names'] else 'inherit' }}">{{ r['unresolved_test_names'] }}</td>
+      <td class="mono" style="color: {{ 'var(--danger)' if r['invalid_rows'] else 'inherit' }}">{{ r['invalid_rows'] }}</td>
+      <td class="mono" style="color: {{ 'var(--danger)' if r['outlier_rows'] else 'inherit' }}">{{ r['outlier_rows'] }}</td>
+    {% endfor %}
+  </table>
+</div>
+<p class="subtitle" style="margin-top:16px;">A clinic with a rising "unresolved test names" count needs its dictionary aliases curated (config/test_dictionary.json) &mdash; no code change required. "Within-report dupes" counts rows where the same test/value was already recorded on an earlier page of the same document (e.g. a summary page restating a detail page's results) &mdash; flagged for review, not silently dropped or double-counted.</p>
+{% endblock %}

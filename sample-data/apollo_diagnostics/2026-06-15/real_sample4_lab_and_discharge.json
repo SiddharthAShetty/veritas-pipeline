@@ -1,0 +1,1720 @@
+{
+    "traceId": "73659e05dc8768bb034da1029ff89dad",
+    "statusCode": 200,
+    "message": [
+        "Success"
+    ],
+    "data": {
+        "responseDetails": [
+            {
+                "classifier": "lab_report",
+                "data": {
+                    "basic_info": {
+                        "uhid": "[UHID-REDACTED]",
+                        "age": "[AGE REDACTED]",
+                        "bill_date": "08/Oct/2025",
+                        "gender": "[GENDER REDACTED]",
+                        "lab_or_hospital_name": "[LAB NAME REDACTED]",
+                        "patient_name": "[PATIENT NAME REDACTED]",
+                        "reports_date": "10/Oct/2025"
+                    },
+                    "report_details": [
+                        {
+                            "page_no": 0,
+                            "range": "<50",
+                            "result": "91",
+                            "test_analytics": "Visible with P-5-P",
+                            "test_name": "ALANINE AMINOTRANSFERASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "17-59",
+                            "result": "150.0",
+                            "test_analytics": "UV with P-5-P",
+                            "test_name": "ASPARTATE AMINOTRANSFERASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "<1.15",
+                            "result": "1.6",
+                            "test_analytics": "Calculated",
+                            "test_name": "AST (SGOT) / ALT (SGPT) RATIO (DE RITIS)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "2.0-3.5",
+                            "result": "3.70",
+                            "test_analytics": "Calculated",
+                            "test_name": "GLOBULIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "20-40",
+                            "result": "49",
+                            "test_analytics": "Flow cytometry",
+                            "test_name": "LYMPHOCYTES",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "38-126",
+                            "result": "128.00",
+                            "test_analytics": "p-nitrophenyl phosphate",
+                            "test_name": "ALKALINE PHOSPHATASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "150000-410000",
+                            "result": "132000",
+                            "test_analytics": "Electrical impedence",
+                            "test_name": "PLATELET COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "19-43",
+                            "result": "11.00",
+                            "test_analytics": "",
+                            "test_name": "UREA",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "8.0 - 23.0",
+                            "result": "5.1",
+                            "test_analytics": "Calculated",
+                            "test_name": "BLOOD UREA NITROGEN",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "135-145",
+                            "result": "132",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "SODIUM",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "98 - 107",
+                            "result": "94",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "CHLORIDE",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "13-17",
+                            "result": "12.0",
+                            "test_analytics": "Spectrophotometer",
+                            "test_name": "HAEMOGLOBIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "40-50",
+                            "result": "36.10",
+                            "test_analytics": "Electronic pulse & Calculation",
+                            "test_name": "PCV",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "4.5-5.5",
+                            "result": "4.23",
+                            "test_analytics": "Electrical Impedence",
+                            "test_name": "RBC COUNT",
+                            "unit": "Million/cu.mm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "2000-7000",
+                            "result": "1990.9",
+                            "test_analytics": "Calculated",
+                            "test_name": "NEUTROPHILS",
+                            "unit": "Cells/cu.mm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "150000-410000",
+                            "result": "124000",
+                            "test_analytics": "Electrical impedence",
+                            "test_name": "PLATELET COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "3.5 - 5",
+                            "result": "3.20",
+                            "test_analytics": "Bromocresol Green",
+                            "test_name": "ALBUMIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "13-17",
+                            "result": "13.7 g/dl",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "COMPLETE BLOOD COUNT (CBC) , WHOLE BLOOD EDTA",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "40-50",
+                            "result": "40.60 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "HAEMOGLOBIN",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "4.5-5.5",
+                            "result": "4.74 Million/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "RBC COUNT",
+                            "unit": "Million/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "83-101",
+                            "result": "35.6 fL",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MCV",
+                            "unit": "fL"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "27-32",
+                            "result": "28.9 pg",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MCH",
+                            "unit": "pg"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "31.5-34.5",
+                            "result": "33.7 g/dl",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MCHC",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "",
+                            "result": "11.9 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "R.D.W",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "11.6-14",
+                            "result": "4,290 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "TOTAL LEUCOCYTE COUNT (TLC)",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "",
+                            "result": "52 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "DIFFERENTIAL LEUCOCYTIC COUNT (DLC)",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "2000-7000",
+                            "result": "2230.8 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "NEUTROPHILS",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "20-40",
+                            "result": "1716 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "LYMPHOCYTES",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "20-500",
+                            "result": "42.9 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "EOSINOPHILS",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "200-1000",
+                            "result": "300.3 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MONOCYTES",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "0-2",
+                            "result": "00 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "BASOPHILS",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "",
+                            "result": "4,290 Cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "CORRECTED TLC",
+                            "unit": "Cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "",
+                            "result": "NEUTROPHILS 2230.8 cells/cu.mm, LYMPHOCYTES 1716 cells/cu.mm, EOSINOPHILS 42.9 cells/cu.mm, MONOCYTES 300.3 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "ABSOLUTE LEUCOCYTE COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "0.78- 3.53",
+                            "result": "1.3",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "Neutrophil lymphocyte ratio (NLR)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "150000-410000",
+                            "result": "132000 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "PLATELET COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "8.1-13.9",
+                            "result": "10.5 FI",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MPV",
+                            "unit": "FI"
+                        },
+                        {
+                            "page_no": 2,
+                            "range": "Microscopy- Giemsa",
+                            "result": "NOT DETECTED",
+                            "test_analytics": "Microscopy- Giemsa",
+                            "test_name": "PERIPHERAL SMEAR FOR MALARIAL PARASITE (MP) , WHOLE BLOOD EDTA",
+                            "unit": "NOT DETECTED"
+                        },
+                        {
+                            "page_no": 2,
+                            "range": "Immunochromotography",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Immunochromotography",
+                            "test_name": "MALARIA VIVAX ANTIGEN , WHOLE BLOOD EDTA",
+                            "unit": "NEGATIVE"
+                        },
+                        {
+                            "page_no": 2,
+                            "range": "Immunochromotography",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Immunochromotography",
+                            "test_name": "MALARIA FALCIPARUM ANTIGEN , WHOLE BLOOD EDTA",
+                            "unit": "NEGATIVE"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "0-1.2",
+                            "result": "0.70",
+                            "test_analytics": "low",
+                            "test_name": "LIVER FUNCTION TEST(LFT)",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "0.0-0.3",
+                            "result": "0.30",
+                            "test_analytics": "low",
+                            "test_name": "BILIRUBIN CONJUGATED(DIRECT)",
+                            "unit": "mg/dl"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "0-0.3",
+                            "result": "0.40",
+                            "test_analytics": "low",
+                            "test_name": "BILIRUBIN(INDIRECT)",
+                            "unit": "mg/dl"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "0-1.1",
+                            "result": "91",
+                            "test_analytics": "high",
+                            "test_name": "ALANINE AMINOTRANSFERASE(ALT/SGPT)",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "17-59",
+                            "result": "150.0",
+                            "test_analytics": "high",
+                            "test_name": "ASPARTATE AMINOTRANSFERASE(AST/SGOT)",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "<1.15",
+                            "result": "1.6",
+                            "test_analytics": "high",
+                            "test_name": "AST(SGOT)/ALT(SGPT)RATIO(DERITIS)",
+                            "unit": "ratio"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "38-126",
+                            "result": "124.00",
+                            "test_analytics": "high",
+                            "test_name": "ALKALINE PHOSPHATASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "6.4-8.3",
+                            "result": "7.60",
+                            "test_analytics": "low",
+                            "test_name": "PROTEIN,TOTAL",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "3.5-5",
+                            "result": "3.90",
+                            "test_analytics": "low",
+                            "test_name": "ALBUMIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "3.5-5",
+                            "result": "3.70",
+                            "test_analytics": "low",
+                            "test_name": "GLOBULIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "2.0-3.5",
+                            "result": "1.05",
+                            "test_analytics": "low",
+                            "test_name": "A/G RATIO",
+                            "unit": "ratio"
+                        },
+                        {
+                            "page_no": 3,
+                            "range": "2.0-3.5",
+                            "result": "0.9-2.0",
+                            "test_analytics": "low",
+                            "test_name": "Comment",
+                            "unit": "ratio"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "0.66-1.25",
+                            "result": "0.90 mg/dL",
+                            "test_analytics": "Creatinine",
+                            "test_name": "RENAL PROFILE/KIDNEY FUNCTION TEST (RFT/KFT), SERUM",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "",
+                            "result": "116.21 mL/min/1.73m2",
+                            "test_analytics": "amidohydrolase",
+                            "test_name": "eGFR - ESTIMATED GLOMERULAR",
+                            "unit": "mL/min/1.73m2"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "",
+                            "result": ">60",
+                            "test_analytics": "CKD-EPI FORMULA",
+                            "test_name": "FILTRATION RATE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "19-43",
+                            "result": "11.00 mg/dL",
+                            "test_analytics": "Blood Urea Nitrogen",
+                            "test_name": "UREA",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "8.0 - 23.0",
+                            "result": "5.1 mg/dL",
+                            "test_analytics": "",
+                            "test_name": "BLOOD UREA NITROGEN",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "3.5-8.5",
+                            "result": "3.70 mg/dL",
+                            "test_analytics": "Calculated",
+                            "test_name": "URIC ACID",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "8.4 - 10.2",
+                            "result": "9.00 mg/dL",
+                            "test_analytics": "",
+                            "test_name": "CALCIUM",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "2.5-4.5",
+                            "result": "4.20 mg/dL",
+                            "test_analytics": "Arsenazo-III",
+                            "test_name": "PHOSPHORUS, INORGANIC",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "135-145",
+                            "result": "132 mmol/L",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "SODIUM",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "3.5-5.1",
+                            "result": "4.4 mmol/L",
+                            "test_analytics": "ISE (Indirect)",
+                            "test_name": "POTASSIUM",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "98 - 107",
+                            "result": "94 mmol/L",
+                            "test_analytics": "",
+                            "test_name": "CHLORIDE",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "6.4-8.3",
+                            "result": "7.60 g/dl",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "PROTEIN, TOTAL",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "3.5 - 5",
+                            "result": "3.90 g/dL",
+                            "test_analytics": "Bromocresol Green",
+                            "test_name": "ALBUMIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "2.0-3.5",
+                            "result": "3.70 g/dL",
+                            "test_analytics": "",
+                            "test_name": "GLOBULIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 4,
+                            "range": "0.9-2.0",
+                            "result": "1.05",
+                            "test_analytics": "Calculated",
+                            "test_name": "A/G RATIO",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 5,
+                            "range": "30-115",
+                            "result": "59.00",
+                            "test_analytics": "normal",
+                            "test_name": "AMYLASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 5,
+                            "range": "23-300",
+                            "result": "180.00",
+                            "test_analytics": "normal",
+                            "test_name": "LIPASE,SERUM",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "PALE YELLOW",
+                            "test_analytics": "Normal",
+                            "test_name": "COMPLETE URINE EXAMINATION (CUE)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "5-7.5",
+                            "result": "6.50",
+                            "test_analytics": "Normal",
+                            "test_name": "pH",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "1.002-1.030",
+                            "result": "1.005",
+                            "test_analytics": "Normal",
+                            "test_name": "SP. GRAVITY",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "BIOCHEMICAL EXAMINATION",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "NEGATIVE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "GLUCOSE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "URINE BILIRUBIN",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "URINE KETONES (RANDOM)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "NITRITE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "LEUCOCYTE ESTERASE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "CENTRIFUGED SEDIMENT WET MOUNT AND MICROSCOPY",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "2-4 /hp",
+                            "test_analytics": "Normal",
+                            "test_name": "Pus Cells",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "0-5 /hp",
+                            "test_analytics": "Normal",
+                            "test_name": "EPITHELIAL CELLS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "<10 /hp",
+                            "test_analytics": "Normal",
+                            "test_name": "RBC",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "0-2 /hpf",
+                            "test_analytics": "Normal",
+                            "test_name": "CASTS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "0-2 Hyaline Cast",
+                            "test_analytics": "Normal",
+                            "test_name": "CRYSTALS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "ABSENT",
+                            "test_analytics": "Normal",
+                            "test_name": "ABSENT",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "ABSENT",
+                            "test_analytics": "Normal",
+                            "test_name": "ABSENT",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 6,
+                            "range": "",
+                            "result": "All urine samples are checked for adequacy and suitability before examination. All abnormal chemical examination are rechecked and verified by manual methods. Microscopy findings are reported as an average of 10 high power fields.",
+                            "test_analytics": "Normal",
+                            "test_name": "Comment",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 7,
+                            "range": "1:80 and above",
+                            "result": "1:40",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "WIDAL TEST (SLIDE METHOD)",
+                            "unit": "AGGLUTINATION"
+                        },
+                        {
+                            "page_no": 7,
+                            "range": "1:80 and above",
+                            "result": "1:40",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "SALMONELLA TYPHI O` , SERUM",
+                            "unit": "AGGLUTINATION"
+                        },
+                        {
+                            "page_no": 7,
+                            "range": "1:80 and above",
+                            "result": "1:40",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "SALMONELLA TYPHI 'H' , SERUM",
+                            "unit": "AGGLUTINATION"
+                        },
+                        {
+                            "page_no": 7,
+                            "range": "1:80 and above",
+                            "result": "1:40",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "S.PARATYPHI A 'H' , SERUM",
+                            "unit": "AGGLUTINATION"
+                        },
+                        {
+                            "page_no": 7,
+                            "range": "1:80 and above",
+                            "result": "1:40",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "S.PARATYPHI B 'H' , SERUM",
+                            "unit": "AGGLUTINATION"
+                        },
+                        {
+                            "page_no": 8,
+                            "range": "NEGATIVE",
+                            "result": "NEGATIVE",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "TYPHIDOT IgG AND IgM , SERUM",
+                            "unit": "ICT"
+                        },
+                        {
+                            "page_no": 9,
+                            "range": "12-16, 35-45, 4.5-5.5, 83-101, 28-32, 31.5-34.5, 11.6-14, 4000-10000, 40-80, 20-40, 1-6, 2-10, 0-2, 150000-410000, 8.1-13.9, 0-10",
+                            "result": "12.0 g/dL, 36.10, 13-17, 40-50, 85.5 fL, 27-32, 33.3, 12.5, 4,630, 43, 49, 01, 07, 46.3, 0.88, 78-353, 124000, 8.1-13.9, 10",
+                            "test_analytics": "",
+                            "test_name": "COMPLETE BLOOD COUNT (CBC) , WHOLE BLOOD EDTA",
+                            "unit": "g/dL, %, cells/cu.mm, cells/cu.mm, %, %, %, %, %, %, %, %, %, %, %, %, "
+                        },
+                        {
+                            "page_no": 10,
+                            "range": "",
+                            "result": "",
+                            "test_analytics": "",
+                            "test_name": "LIVER FUNCTION TEST (LFT) , SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 11,
+                            "range": "",
+                            "result": "NO GROWTH AFTER 48 HOURS OF INCUBATION",
+                            "test_analytics": "",
+                            "test_name": "CULTURE AND SENSITIVITY - AEROBIC (BLOOD)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 12,
+                            "range": "",
+                            "result": "",
+                            "test_analytics": "",
+                            "test_name": "DIAGNOSTICS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "<50",
+                            "result": "91",
+                            "test_analytics": "Visible with P-5-P",
+                            "test_name": "ALANINE AMINOTRANSFERASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "17-59",
+                            "result": "150.0",
+                            "test_analytics": "UV with P-5-P",
+                            "test_name": "ASPARTATE AMINOTRANSFERASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "<1.15",
+                            "result": "1.6",
+                            "test_analytics": "Calculated",
+                            "test_name": "AST (SGOT) / ALT (SGPT) RATIO (DERITIS)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "2.0-3.5",
+                            "result": "3.70",
+                            "test_analytics": "Calculated",
+                            "test_name": "GLOBULIN",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "20-40",
+                            "result": "49",
+                            "test_analytics": "Flow cytometry",
+                            "test_name": "LYMPHOCYTES",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "38-126",
+                            "result": "128.00",
+                            "test_analytics": "p-nitrophenyl phosphate",
+                            "test_name": "ALKALINE PHOSPHATASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "150000-410000",
+                            "result": "132000",
+                            "test_analytics": "Electrical impedence",
+                            "test_name": "PLATELET COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "19-43",
+                            "result": "11.00",
+                            "test_analytics": "",
+                            "test_name": "UREA",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "8.0 - 23.0",
+                            "result": "5.1",
+                            "test_analytics": "Calculated",
+                            "test_name": "BLOOD UREA NITROGEN",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "135-145",
+                            "result": "132",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "SODIUM",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "98 - 107",
+                            "result": "94",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "CHLORIDE",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "13-17",
+                            "result": "12.0",
+                            "test_analytics": "Spectrophotometer",
+                            "test_name": "HAEMOGLOBIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "40-50",
+                            "result": "36.10",
+                            "test_analytics": "Electrical pulse & Calculation",
+                            "test_name": "PCV",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "4.5-5.5",
+                            "result": "4.23",
+                            "test_analytics": "Electrical Impedence",
+                            "test_name": "RBC COUNT",
+                            "unit": "Million/cu.mm"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "2000-7000",
+                            "result": "1990.9",
+                            "test_analytics": "Calculated",
+                            "test_name": "NEUTROPHILS",
+                            "unit": "Cells/cu.mm"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "150000-410000",
+                            "result": "124000",
+                            "test_analytics": "Electrical impedence",
+                            "test_name": "PLATELET COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 13,
+                            "range": "3.5 - 5",
+                            "result": "3.20",
+                            "test_analytics": "Bromocresol Green",
+                            "test_name": "ALBUMIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "13-17",
+                            "result": "13.7 g/dl",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "COMPLETE BLOOD COUNT (CBC) , WHOLE BLOOD EDTA",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "40-50",
+                            "result": "40.60 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "HAEMOGLOBIN",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "4.5-5.5",
+                            "result": "4.74 Million/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "RBC COUNT",
+                            "unit": "Million/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "83-101",
+                            "result": "35.6 fL",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MCV",
+                            "unit": "fL"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "27-32",
+                            "result": "28.9 pg",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MCH",
+                            "unit": "pg"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "31.5-34.5",
+                            "result": "33.7 g/dl",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MCHC",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "",
+                            "result": "11.9 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "R.D.W",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "11.6-14",
+                            "result": "4,290 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "TOTAL LEUCOCYTE COUNT (TLC)",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "40-80",
+                            "result": "52 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "DIFFERENTIAL LEUCOCYTIC COUNT (DLC)",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "2000-7000",
+                            "result": "2230.8 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "NEUTROPHILS",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "20-40",
+                            "result": "1716 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "LYMPHOCYTES",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "20-500",
+                            "result": "42.9 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "EOSINOPHILS",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "200-1000",
+                            "result": "300.3 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MONOCYTES",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "0-2",
+                            "result": "00 %",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "BASOPHILS",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "",
+                            "result": "4,290 Cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "CORRECTED TLC",
+                            "unit": "Cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "",
+                            "result": "Neutrophils: 2230.8 cells/cu.mm, Lymphocytes: 1716 cells/cu.mm, Eosinophils: 42.9 cells/cu.mm, Monocytes: 300.3 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "ABSOLUTE LEUCOCYTE COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "0.78- 3.53",
+                            "result": "1.3",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "Neutrophil lymphocyte ratio (NLR)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "150000-410000",
+                            "result": "132000 cells/cu.mm",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "PLATELET COUNT",
+                            "unit": "cells/cu.mm"
+                        },
+                        {
+                            "page_no": 14,
+                            "range": "8.1-13.9",
+                            "result": "10.5 FI",
+                            "test_analytics": "low/normal/high",
+                            "test_name": "MPV",
+                            "unit": "FI"
+                        },
+                        {
+                            "page_no": 15,
+                            "range": "",
+                            "result": "NOT DETECTED",
+                            "test_analytics": "Microscopy- Giemsa stained Thick & Thin Smear",
+                            "test_name": "PERIPHERAL SMEAR FOR MALARIAL PARASITE (MP) , WHOLE BLOOD EDTA",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 15,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Immunochromotography",
+                            "test_name": "MALARIA VIVAX ANTIGEN , WHOLE BLOOD EDTA",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 15,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Immunochromotography",
+                            "test_name": "MALARIA FALCIPARUM ANTIGEN , WHOLE BLOOD EDTA",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "0-1.2",
+                            "result": "0.70",
+                            "test_analytics": "low",
+                            "test_name": "LIVER FUNCTION TEST (LFT) , SERUM",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "0.0-0.3",
+                            "result": "0.30",
+                            "test_analytics": "low",
+                            "test_name": "BILIRUBIN CONJUGATED (DIRECT)",
+                            "unit": "mg/dl"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "0-0.3",
+                            "result": "0.40",
+                            "test_analytics": "low",
+                            "test_name": "BILIRUBIN (INDIRECT)",
+                            "unit": "mg/dl"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "0-1.1",
+                            "result": "91",
+                            "test_analytics": "high",
+                            "test_name": "ALANINE AMINOTRANSFERASE (ALT/SGPT)",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "17-59",
+                            "result": "150.0",
+                            "test_analytics": "high",
+                            "test_name": "ASPARTATE AMINOTRANSFERASE (AST/SGOT)",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "<1.15",
+                            "result": "1.6",
+                            "test_analytics": "high",
+                            "test_name": "AST (SGOT) / ALT (SGPT) RATIO (DERITIS)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "38-126",
+                            "result": "124.00",
+                            "test_analytics": "high",
+                            "test_name": "ALKALINE PHOSPHATASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "6.4-8.3",
+                            "result": "7.60",
+                            "test_analytics": "low",
+                            "test_name": "PROTEIN, TOTAL",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "3.5 - 5",
+                            "result": "3.90",
+                            "test_analytics": "low",
+                            "test_name": "ALBUMIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "3.5 - 5",
+                            "result": "3.70",
+                            "test_analytics": "low",
+                            "test_name": "GLOBULIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 16,
+                            "range": "2.0-3.5",
+                            "result": "1.05",
+                            "test_analytics": "low",
+                            "test_name": "A/G RATIO",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "0.66-1.25",
+                            "result": "0.90 mg/dL",
+                            "test_analytics": "Creatinine",
+                            "test_name": "RENAL PROFILE/KIDNEY FUNCTION TEST (RFT/KFT), SERUM",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "",
+                            "result": "116.21 mL/min/1.73m2",
+                            "test_analytics": "amidohydrolase",
+                            "test_name": "eGFR - ESTIMATED GLOMERULAR",
+                            "unit": "mL/min/1.73m2"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "",
+                            "result": ">60",
+                            "test_analytics": "CKD-EPI FORMULA",
+                            "test_name": "FILTRATION RATE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "19-43",
+                            "result": "11.00 mg/dL",
+                            "test_analytics": "Blood Urea Nitrogen",
+                            "test_name": "UREA",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "8.0 - 23.0",
+                            "result": "5.1 mg/dL",
+                            "test_analytics": "",
+                            "test_name": "BLOOD UREA NITROGEN",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "3.5-8.5",
+                            "result": "3.70 mg/dL",
+                            "test_analytics": "Calculated",
+                            "test_name": "URIC ACID",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "8.4 - 10.2",
+                            "result": "9.00 mg/dL",
+                            "test_analytics": "",
+                            "test_name": "CALCIUM",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "2.5-4.5",
+                            "result": "4.20 mg/dL",
+                            "test_analytics": "Arsenazo-III",
+                            "test_name": "PHOSPHORUS, INORGANIC",
+                            "unit": "mg/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "135-145",
+                            "result": "132 mmol/L",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "SODIUM",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "3.5-5.1",
+                            "result": "4.4 mmol/L",
+                            "test_analytics": "ISE (Indirect)",
+                            "test_name": "POTASSIUM",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "98 - 107",
+                            "result": "94 mmol/L",
+                            "test_analytics": "",
+                            "test_name": "CHLORIDE",
+                            "unit": "mmol/L"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "6.4-8.3",
+                            "result": "7.60 g/dl",
+                            "test_analytics": "Direct ISE",
+                            "test_name": "PROTEIN, TOTAL",
+                            "unit": "g/dl"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "3.5 - 5",
+                            "result": "3.90 g/dL",
+                            "test_analytics": "Biuret",
+                            "test_name": "ALBUMIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "2.0-3.5",
+                            "result": "3.70 g/dL",
+                            "test_analytics": "",
+                            "test_name": "GLOBULIN",
+                            "unit": "g/dL"
+                        },
+                        {
+                            "page_no": 17,
+                            "range": "0.9-2.0",
+                            "result": "1.05",
+                            "test_analytics": "Calculated",
+                            "test_name": "A/G RATIO",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 18,
+                            "range": "30-115",
+                            "result": "59.00",
+                            "test_analytics": "normal",
+                            "test_name": "AMYLASE",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 18,
+                            "range": "23-300",
+                            "result": "180.00",
+                            "test_analytics": "normal",
+                            "test_name": "LIPASE,SERUM",
+                            "unit": "U/L"
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "PALE YELLOW",
+                            "test_analytics": "Normal",
+                            "test_name": "COMPLETE URINE EXAMINATION (CUE)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "5-7.5",
+                            "result": "6.50",
+                            "test_analytics": "Normal",
+                            "test_name": "pH",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "1.002-1.030",
+                            "result": "1.005",
+                            "test_analytics": "Normal",
+                            "test_name": "SP. GRAVITY",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "BIOCHEMICAL EXAMINATION",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "NEGATIVE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "GLUCOSE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "URINE BILIRUBIN",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "URINE KETONES (RANDOM)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "NITRITE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "LEUCOCYTE ESTERASE",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "Normal",
+                            "test_name": "CENTRIFUGED SEDIMENT WET MOUNT AND MICROSCOPY",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "2-4 /hp",
+                            "test_analytics": "Normal",
+                            "test_name": "Pus Cells",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "0-5 /hp",
+                            "test_analytics": "Normal",
+                            "test_name": "EPITHELIAL CELLS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "<10 /hp",
+                            "test_analytics": "Normal",
+                            "test_name": "RBC",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "0-2 /hpf",
+                            "test_analytics": "Normal",
+                            "test_name": "CASTS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "0-2 Hyaline Cast",
+                            "test_analytics": "Normal",
+                            "test_name": "CRYSTALS",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "ABSENT",
+                            "test_analytics": "Normal",
+                            "test_name": "ABSENT",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "ABSENT",
+                            "test_analytics": "Normal",
+                            "test_name": "ABSENT",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 19,
+                            "range": "",
+                            "result": "All urine samples are checked for adequacy and suitability before examination. All abnormal chemical examination are rechecked and verified by manual methods. Microscopy findings are reported as an average of 10 high power fields.",
+                            "test_analytics": "Normal",
+                            "test_name": "Comment",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 20,
+                            "range": "",
+                            "result": "1:40",
+                            "test_analytics": "AGGLUTINATION",
+                            "test_name": "WIDAL TEST (SLIDE METHOD)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 20,
+                            "range": "",
+                            "result": "1:40",
+                            "test_analytics": "AGGLUTINATION",
+                            "test_name": "SALMONELLA TYPHI O` , SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 20,
+                            "range": "",
+                            "result": "1:40",
+                            "test_analytics": "AGGLUTINATION",
+                            "test_name": "SALMONELLA TYPHI 'H' , SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 20,
+                            "range": "",
+                            "result": "1:40",
+                            "test_analytics": "AGGLUTINATION",
+                            "test_name": "S.PARATYPHI A 'H' , SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 20,
+                            "range": "",
+                            "result": "1:40",
+                            "test_analytics": "AGGLUTINATION",
+                            "test_name": "S.PARATYPHI B 'H' , SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 21,
+                            "range": "",
+                            "result": "NEGATIVE",
+                            "test_analytics": "ICT",
+                            "test_name": "TYPHIDOT IgG AND IgM, SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 22,
+                            "range": "",
+                            "result": "",
+                            "test_analytics": "",
+                            "test_name": "COMPLETE BLOOD COUNT (CBC) , WHOLE BLOOD EDTA",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 23,
+                            "range": "",
+                            "result": "",
+                            "test_analytics": "",
+                            "test_name": "LIVER FUNCTION TEST(LFT),SERUM",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 24,
+                            "range": "",
+                            "result": "NO GROWTH AFTER 48 HOURS OF INCUBATION",
+                            "test_analytics": "",
+                            "test_name": "CULTURE AND SENSITIVITY - AEROBIC (BLOOD)",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 25,
+                            "range": "Patient Name: [NAME REDACTED]",
+                            "result": "Touching Lives",
+                            "test_analytics": "Collected: 08/Oct/2025 02:39PM",
+                            "test_name": "DIAGNOSTICS",
+                            "unit": "Expertise. Empowering you."
+                        }
+                    ]
+                },
+                "status": "success",
+                "errorMessage": null,
+                "fileId": null
+            },
+            {
+                "classifier": "discharge_summary",
+                "data": {
+                    "admissionDate": "08-10-2025",
+                    "age": "[AGE REDACTED]",
+                    "briefHistory": "Admitted with C/O High grade fever with headache since 7 days.",
+                    "diagnosis": "Acute enteric fever with acute Gastroenteritis with moderate to severe dehydration",
+                    "dischargeMedications": [
+                        {
+                            "dose": "400",
+                            "frequency": "after food",
+                            "medicine": "TAB. CEFTAS- 400",
+                            "type": null
+                        },
+                        {
+                            "dose": "500 mg",
+                            "frequency": "1",
+                            "medicine": "TAB. AZITHRAL 500 mg",
+                            "type": null
+                        },
+                        {
+                            "dose": "40",
+                            "frequency": "before breakfast",
+                            "medicine": "TAB. PAN - 40",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. ULTRACET",
+                            "type": null
+                        },
+                        {
+                            "dose": "650 mg",
+                            "frequency": "in case of fever",
+                            "medicine": "TAB. DOLO - 650 mg",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. ZINCOVIT",
+                            "type": null
+                        },
+                        {
+                            "dose": "40 mg",
+                            "frequency": "As per doctor's advice",
+                            "medicine": "Inj. Pantocid 40 mg",
+                            "type": null
+                        },
+                        {
+                            "dose": "As per doctor's advice",
+                            "frequency": "As per doctor's advice",
+                            "medicine": "Inj. Emeset",
+                            "type": null
+                        },
+                        {
+                            "dose": "As per doctor's advice",
+                            "frequency": "As per doctor's advice",
+                            "medicine": "Inj. Bucsopan",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. CEFTAS- 400 (after food)",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. AZITHRAL 500 mg",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. PAN - 40 (before breakfast)",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. ULTRACET",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "1",
+                            "medicine": "TAB. DOLO - 650 mg(in case of fever)",
+                            "type": null
+                        },
+                        {
+                            "dose": "1",
+                            "frequency": "10",
+                            "medicine": "TAB. ZINCOVIT",
+                            "type": null
+                        }
+                    ],
+                    "dischargeDate": "11-10-2025",
+                    "doctorName": "[DOCTOR NAME REDACTED]",
+                    "gender": "[GENDER REDACTED]",
+                    "generalExaminations": "Temp: 101.5*F Pulse: 94/min BP: 100/60mmhg RR: 20/min CVS: S1-S2 Normal P/A: Soft, diffuse abd. tenderness + RS: B/L air entry equal CNS: Conscious & Oriented",
+                    "hospitalAddress": "[HOSPITAL ADDRESS REDACTED]",
+                    "hospitalName": "[HOSPITAL NAME REDACTED]",
+                    "medicineInjectionsInvestigation": [
+                        "Inj. Bucsopan",
+                        "Inj. Emeset",
+                        "Inj. Pantocid 40 mg"
+                    ],
+                    "patientName": "[PATIENT NAME REDACTED]",
+                    "postDischargeAdvice": null,
+                    "recommendations": "ADVICE ON DISCHARGE :",
+                    "ward": "TWIN SHARING - SNEH TWIN SHARING",
+                    "courseDuringHospitalisation": []
+                },
+                "status": "success",
+                "errorMessage": null,
+                "fileId": null
+            }
+        ],
+        "correlationId": "7fdbd26b1e9af10cdc4dec0b4ef09e6c",
+        "documentId": "DOC01JZ3JI7HLD5WIPQA0CN0K16ZP7",
+        "metaDetails": [
+            {
+                "key": "DestinationIdentifier",
+                "value": "stg-datalake"
+            },
+            {
+                "key": "claim_no",
+                "value": "[CLAIM-REDACTED-869718]"
+            },
+            {
+                "key": "nt_code",
+                "value": "[NT-REDACTED]"
+            },
+            {
+                "key": "source_system",
+                "value": "FASTTRACK"
+            },
+            {
+                "key": "ConsumerClientId",
+                "value": "a825b5f3-62ac-58dd-4fa6-9bda372bdd1c"
+            }
+        ],
+        "status": true,
+        "message": null
+    }
+}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Document {{ document_id }}</h1>
+<p class="subtitle"><a href="/records">&larr; back to search</a></p>
+
+<div class="section grid grid-2">
+  <div class="card">
+    <h2>Standardised output ({{ rows|length }} rows)</h2>
+    <table>
+      <tr><th>Type</th><th>Test</th><th>Result</th><th>Unit</th><th>Status</th></tr>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r['record_type'] }}</td>
+        <td>{{ r['test_name_canonical'] or r['medicine'] or r['diagnosis'] or '' }}</td>
+        <td class="mono">{{ r['result_text'] or r['dose'] or '' }}</td>
+        <td class="mono">{{ r['unit_canonical'] or '' }}</td>
+        <td>{% if r['test_analytics'] %}<span class="pill {{ r['test_analytics']|pill_class }}">{{ r['test_analytics'] }}</span>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <div class="card">
+    <h2>Raw source JSON</h2>
+    {% if raw_json_pretty %}
+    <pre class="jsonblock">{{ raw_json_pretty }}</pre>
+    {% else %}
+    <p class="subtitle" style="margin:0;">No audit trail file found for this document.</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="section card">
+  <h2>Patient / visit context</h2>
+  {% set r0 = rows[0] %}
+  <dl class="kv">
+    <dt>Patient</dt><dd>{{ r0['patient_name'] }}</dd>
+    <dt>UHID</dt><dd class="mono">{{ r0['uhid'] }}</dd>
+    <dt>Gender</dt><dd>{{ r0['gender'] }}</dd>
+    <dt>Hospital</dt><dd>{{ r0['hospital_name'] }}</dd>
+    <dt>Clinic ID</dt><dd class="mono">{{ r0['clinic_id'] }}</dd>
+  </dl>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "txnId": "CC-TXN-77102",
+    "reportId": "CC-REP-33091",
+    "encounterId": "CC-ENC-10045",
+    "mrn": "CC-MRN-2201",
+    "patientFullName": "[PATIENT NAME REDACTED]",
+    "patientAge": "29Y",
+    "patientGender": "M",
+    "facility": "CityCare Hospital - Downtown",
+    "billedOn": "06/16/2026",
+    "resultedOn": "06/16/2026"
+  },
+  "labResults": [
+    {"analyte": "Haemoglobin", "finding": "999", "units": "g/dl", "refRange": "13.0-17.0", "interpretation": ""},
+    {"analyte": "RBC COUNT", "finding": "4.8", "units": "million/cumm", "refRange": "4.2-5.9", "interpretation": ""},
+    {"analyte": "ALT (SGPT)", "finding": "62", "units": "u/l", "refRange": "7-56", "interpretation": "H"},
+    {"analyte": "AST (SGOT)", "finding": "PENDING", "units": "u/l", "refRange": "10-40", "interpretation": ""},
+    {"analyte": "eGFR - ESTIMATED GLOMERULAR FILTRATION RATE", "finding": "88", "units": "mL/min/1.73m2", "refRange": "90-120", "interpretation": "L"},
+    {"analyte": "CALCIUM", "finding": "9.9", "units": "mg/dl", "refRange": "8.5-10.5", "interpretation": ""}
+  ]
+}

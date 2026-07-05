@@ -1,0 +1,179 @@
+{
+    "traceId": "ad717d432afa08f2b59bd1bdcb861863",
+    "statusCode": 200,
+    "message": [
+        "Success"
+    ],
+    "data": {
+        "responseDetails": [
+            {
+                "classifier": "discharge_summary",
+                "data": {
+                    "admissionDate": "09-10-2025",
+                    "age": "[AGE REDACTED]",
+                    "briefHistory": "Admitted today with complaints of labour pains and bleeding P/V",
+                    "diagnosis": "Primigravida with 37 Weeks 5 Days with Pathological Cerebroplacental Ratio, for Induction of Labour",
+                    "dischargeMedications": [
+                        {
+                            "dose": "",
+                            "frequency": "",
+                            "medicine": "Tab. miso",
+                            "type": null
+                        },
+                        {
+                            "dose": "",
+                            "frequency": "",
+                            "medicine": "Inj. Synto",
+                            "type": null
+                        },
+                        {
+                            "dose": "",
+                            "frequency": "",
+                            "medicine": "IV Fluids",
+                            "type": null
+                        },
+                        {
+                            "dose": "N/A",
+                            "frequency": "N/A",
+                            "medicine": "N/A",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 TAB",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Tab. miso",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 INJ",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Inj. Pan",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 INJ",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Inj. PCM",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 INJ",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Inj. Dynapar",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 INJ",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Inj. Emeset",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 INJ",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Inj. Fortwin",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 INJ",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Inj. Phenargan",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 CAP",
+                            "frequency": "12 HOURLY",
+                            "medicine": "Cap. Pan D",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 TAB",
+                            "frequency": "8 HOURLY",
+                            "medicine": "Tab. Diclomol",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 CAP",
+                            "frequency": "24 HOURLY",
+                            "medicine": "Cap. Vizylac",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 TAB",
+                            "frequency": "12 HOURLY",
+                            "medicine": "TAB CEFTUM 500 MG",
+                            "type": null
+                        },
+                        {
+                            "dose": "1 CAP",
+                            "frequency": "12 HOURLY",
+                            "medicine": "CAP. PAN 40",
+                            "type": null
+                        },
+                        {
+                            "dose": "2TSF",
+                            "frequency": "1",
+                            "medicine": "POWDER NATUROLAX",
+                            "type": null
+                        },
+                        {
+                            "dose": "30 ML",
+                            "frequency": "1",
+                            "medicine": "SYP DUPHALAC",
+                            "type": null
+                        }
+                    ],
+                    "dischargeDate": "11-10-2025",
+                    "doctorName": "[DOCTOR NAME REDACTED]",
+                    "gender": "[GENDER REDACTED]",
+                    "generalExaminations": "GC- Fair, PR-88/min, BP-120/80 mmHg, RR-16/min, Afebrile, Chest /CVS-NAD, P/A- uterus term size, irritable, cephalic, FHR+ regular, P/S- os open, no active bleeding P/V, P/V- 1 finger loose, cervix early effaced, membrane present, vertex -3, pelvis adequate",
+                    "hospitalAddress": "[HOSPITAL ADDRESS REDACTED]",
+                    "hospitalName": "[HOSPITAL NAME REDACTED]",
+                    "medicineInjectionsInvestigation": [
+                        "Inj. Supacef",
+                        "Inj. Pan",
+                        "Inj. PCM",
+                        "Inj. Dynapar",
+                        "Inj. Emeset",
+                        "Inj. Fortwin",
+                        "Inj. Phenargan"
+                    ],
+                    "patientName": "[PATIENT NAME REDACTED]",
+                    "postDischargeAdvice": null,
+                    "recommendations": "REST & NUTRITIOUS DIET, PLENTY OF FLUIDS, ABSTINENCE, EXCLUSIVE BREAST FEEDING, STITCHLINE CARE AS ADVISED, TAB CEFTUM 500 MG 1 TAB 12 HOURLY FOR 5 DAYS, CAP. PAN 40 1 CAP 12 HOURLY FOR 5 DAYS, TAB DICLOMOL 1 TAB 8 HOURLY FOR 5 DAYS AND THEN AS AND WHEN REQUIRED FOR PAIN, CAP VIZYLAC 1 CAP 24 HOURLY FOR 5 DAYS, SYP DUPHALAC 30 ML AT BED TIME IN CASE OF CONSTIPATION, POWDER NATUROLAX 2TSF WITH 1 GLASS OF MILK / WATER AT BED TIME IN CASE OF CONSTIPATION, AVOID LIFTING HEAVY WEIGHT OR STRENUOUS ACTIVITY FOR 6 WEEKS, Vigilance At Home, In case of any Emergency e.g fever of > 101.50F / 38.60C, onset of new pain or worsening previous pain, chest pain, breathlessness, calf tenderness, discharge from your operative wound, vomiting, urinary complaints, abdominal distension etc please call emergency at 45302222, Follow-Up Instructions, Patient verbalized understanding of the Discharge Instructions.",
+                    "ward": "Fortis Hospital",
+                    "courseDuringHospitalisation": []
+                },
+                "status": "success",
+                "errorMessage": null,
+                "fileId": null
+            }
+        ],
+        "correlationId": "bf4e3c9c04d36f5c90ebef1c72e2b5c4",
+        "documentId": "DOC01753KEPCMVLML3B3VTYA5KOS6I",
+        "metaDetails": [
+            {
+                "key": "DestinationIdentifier",
+                "value": "stg-datalake"
+            },
+            {
+                "key": "claim_no",
+                "value": "[CLAIM-REDACTED-842817]"
+            },
+            {
+                "key": "nt_code",
+                "value": "[NT-REDACTED]"
+            },
+            {
+                "key": "source_system",
+                "value": "FASTTRACK"
+            },
+            {
+                "key": "ConsumerClientId",
+                "value": "5c5eebdb-5bf9-b15a-74b0-014165e5c6f2"
+            }
+        ],
+        "status": true,
+        "message": null
+    }
+}

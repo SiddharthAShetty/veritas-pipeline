@@ -1,0 +1,39 @@
+{
+  "clinic_id": "medplus_labs",
+  "clinic_name": "MedPlus Labs",
+  "source_system": "medplus_flat_v2",
+  "match": {"strategy": "envelope_shape", "required_keys": ["patient", "tests", "report_id"]},
+  "date_format": "%Y-%m-%d",
+  "envelope": {
+    "trace_id_path": "report_id",
+    "document_id_path": "report_id",
+    "correlation_id_path": "visit_id",
+    "blocks_path": null,
+    "record_type_field": null,
+    "record_type_map": {"default": "lab_report"}
+  },
+  "lab_report": {
+    "basic_info_path": "patient",
+    "demographics_field_map": {
+      "uhid": "patient_id",
+      "age": "age_years",
+      "gender": "sex",
+      "hospital_name": "lab_name",
+      "patient_name": "full_name",
+      "bill_date": "invoice_date",
+      "reports_date": "report_date"
+    },
+    "rows_path": "tests",
+    "row_field_map": {
+      "test_name": "test",
+      "result_text": "value",
+      "unit_original": "uom",
+      "range_text": "normal_range",
+      "test_analytics": "flag",
+      "page_number": null
+    },
+    "skip_rows_where": {}
+  },
+  "discharge_summary": null,
+  "dedup_key_fields": ["document_id"]
+}

@@ -1,0 +1,35 @@
+{
+  "traceId": "wd7f9a1c2e3b4d5f6071829384756afe",
+  "statusCode": 200,
+  "message": ["Success"],
+  "data": {
+    "correlationId": "wd4432112233aabbccddeeff00112233",
+    "documentId": "DOC02WD11223344556677889900AABB",
+    "status": true,
+    "message": null,
+    "responseDetails": [
+      {
+        "classifier": "lab_report",
+        "data": {
+          "basic_info": {
+            "uhid": "[UHID-REDACTED]",
+            "age": "33Y11M265D",
+            "bill_date": "",
+            "gender": "",
+            "lab_or_hospital_name": "[LAB NAME REDACTED]",
+            "patient_name": "[PATIENT NAME REDACTED]",
+            "reports_date": "17-06-2026"
+          },
+          "report_details": [
+            {"page_no": 0, "range": "range", "result": "result", "test_analytics": "low/normal/high", "test_name": "test_name", "unit": "unit"},
+            {"page_no": 1, "range": "11.5-15.5", "result": "0.1", "test_analytics": "", "test_name": "haemoglobin", "unit": "g/dl"},
+            {"page_no": 1, "range": "4.0-5.2", "result": "3.9 mil/cu.cm", "test_analytics": "", "test_name": "RBC", "unit": ""},
+            {"page_no": 1, "range": "135-145", "result": "140", "test_analytics": "", "test_name": "Sodium", "unit": "mmol/l"},
+            {"page_no": 1, "range": "", "result": "Neutrophil - 55.0, Lymphocyte - 35.0, Eosinophils - 3.0, Monocytes - 5.0, Basophils - 2.0", "test_analytics": "", "test_name": "Differential Leukocyte Counts", "unit": ""},
+            {"page_no": 1, "range": "3.5-5.1", "result": "NEGATIVE", "test_analytics": "", "test_name": "Potassium", "unit": "mmol/l"}
+          ]
+        }
+      }
+    ]
+  }
+}

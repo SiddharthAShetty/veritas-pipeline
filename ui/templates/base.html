@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Veritas Data Pipeline{% endblock %}</title>
+<style>
+  :root {
+    --bg: #0B1220;
+    --bg-panel: #121B2E;
+    --bg-panel-raised: #17233B;
+    --border: #253352;
+    --text: #E4E9F4;
+    --text-dim: #8C9BC0;
+    --text-faint: #5A688C;
+    --accent: #4FD1C5;
+    --accent-dim: #1E4D48;
+    --danger: #FF6B6B;
+    --danger-dim: #3A1F26;
+    --warn: #F5B94D;
+    --warn-dim: #3D3320;
+    --ok: #6FCF97;
+    --ok-dim: #1E3A2C;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: var(--sans); font-size: 14px; line-height: 1.5;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px; border-bottom: 1px solid var(--border);
+    background: var(--bg-panel);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: 0.02em; }
+  .brand .mark { width: 20px; height: 20px; border-radius: 5px; background: linear-gradient(135deg, var(--accent), #2C7A73); flex-shrink:0; }
+  .brand small { color: var(--text-faint); font-weight: 400; margin-left: 6px; }
+  nav { display: flex; gap: 22px; }
+  nav a { color: var(--text-dim); font-size: 13px; font-weight: 500; letter-spacing: 0.01em; }
+  nav a.active, nav a:hover { color: var(--text); text-decoration: none; }
+  main { max-width: 1180px; margin: 0 auto; padding: 28px; }
+  h1 { font-size: 20px; margin: 0 0 4px 0; font-weight: 600; }
+  h2 { font-size: 15px; margin: 0 0 14px 0; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+  .subtitle { color: var(--text-faint); font-size: 13px; margin-bottom: 24px; }
+  .grid { display: grid; gap: 16px; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .card {
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .stat-value { font-family: var(--mono); font-size: 28px; font-weight: 600; }
+  .stat-label { color: var(--text-faint); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: var(--text-faint); font-weight: 500; text-transform: uppercase;
+       font-size: 11px; letter-spacing: 0.05em; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .mono { font-family: var(--mono); font-size: 12.5px; color: var(--text-dim); }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: 0.02em; }
+  .pill-outlier { background: var(--danger-dim); color: var(--danger); }
+  .pill-invalid { background: var(--danger-dim); color: var(--danger); }
+  .pill-above, .pill-below { background: var(--warn-dim); color: var(--warn); }
+  .pill-within { background: var(--ok-dim); color: var(--ok); }
+  .pill-unclassified, .pill-na { background: rgba(255,255,255,0.06); color: var(--text-faint); }
+  .section { margin-bottom: 30px; }
+  .empty { color: var(--text-faint); padding: 30px; text-align: center; border: 1px dashed var(--border); border-radius: 10px; }
+  input[type=text], select {
+    background: var(--bg-panel-raised); border: 1px solid var(--border); color: var(--text);
+    padding: 8px 12px; border-radius: 6px; font-size: 13px; font-family: var(--sans);
+  }
+  button, .btn {
+    background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent);
+    padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;
+  }
+  button:hover, .btn:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+  .filter-bar { display: flex; gap: 10px; margin-bottom: 18px; align-items: center; }
+  pre.jsonblock {
+    background: #070C16; border: 1px solid var(--border); border-radius: 8px; padding: 16px;
+    font-family: var(--mono); font-size: 12px; color: #9FB4D8; overflow-x: auto; max-height: 600px;
+  }
+  .kv { display: grid; grid-template-columns: 140px 1fr; gap: 4px 12px; font-size: 13px; }
+  .kv dt { color: var(--text-faint); }
+  .kv dd { margin: 0; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="mark"></span>Veritas Pipeline <small>data ops console</small></div>
+    <nav>
+      <a href="/" class="{{ 'active' if active=='dashboard' }}">Dashboard</a>
+      <a href="/flagged" class="{{ 'active' if active=='flagged' }}">Flagged Queue</a>
+      <a href="/clinics" class="{{ 'active' if active=='clinics' }}">Clinics</a>
+      <a href="/records" class="{{ 'active' if active=='records' }}">Record Inspector</a>
+    </nav>
+  </div>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

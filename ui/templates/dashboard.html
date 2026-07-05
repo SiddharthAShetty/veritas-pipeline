@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Pipeline Dashboard</h1>
+<p class="subtitle">Last run finished {{ last_run['finished_at'] if last_run else 'never' }} &middot; {{ total_runs }} run(s) total</p>
+
+<div class="section grid grid-4">
+  <div class="card">
+    <div class="stat-value">{{ last_run['files_seen'] if last_run else 0 }}</div>
+    <div class="stat-label">Files seen (last run)</div>
+  </div>
+  <div class="card">
+    <div class="stat-value">{{ last_run['files_processed'] if last_run else 0 }}</div>
+    <div class="stat-label">Processed successfully</div>
+  </div>
+  <div class="card">
+    <div class="stat-value" style="color: var(--danger)">{{ last_run['files_failed'] if last_run else 0 }}</div>
+    <div class="stat-label">Failed / dead-lettered</div>
+  </div>
+  <div class="card">
+    <div class="stat-value" style="color: var(--warn)">{{ last_run['duplicates_suppressed'] if last_run else 0 }}</div>
+    <div class="stat-label">Duplicates suppressed</div>
+  </div>
+</div>
+
+<div class="section grid grid-2">
+  <div class="card">
+    <div class="stat-value">{{ total_records }}</div>
+    <div class="stat-label">Total canonical records in DB</div>
+  </div>
+  <div class="card">
+    <div class="stat-value" style="color: var(--warn)">{{ last_run['rows_flagged'] if last_run else 0 }}</div>
+    <div class="stat-label">Rows flagged this run &mdash; <a href="/flagged">view queue</a></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Result breakdown (test_analytics)</h2>
+  <div class="card">
+    <table>
+      <tr><th>Status</th><th>Count</th></tr>
+      {% for r in flagged_breakdown %}
+      <tr><td><span class="pill {{ r['test_analytics']|pill_class }}">{{ r['test_analytics'] }}</span></td><td class="mono">{{ r['c'] }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<div class="section grid grid-2">
+  <div class="card">
+    <h2 style="margin-bottom:10px;">Record types</h2>
+    <table>
+      {% for r in record_type_breakdown %}
+      <tr><td>{{ r['record_type'] }}</td><td class="mono">{{ r['c'] }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+  <div class="card">
+    <h2 style="margin-bottom:10px;">Dead-letter errors ({{ error_count }} total)</h2>
+    {% if recent_errors %}
+    <table>
+      <tr><th>Clinic</th><th>Reason</th></tr>
+      {% for e in recent_errors %}
+      <tr><td class="mono">{{ e.get('clinic_id','-') }}</td><td>{{ e.get('reason', e.get('stage','-')) }}</td></tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p class="subtitle" style="margin:0;">No errors logged.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

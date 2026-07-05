@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "description": "Brand name (India-market common brands) -> generic name + drug class. Take-home scope: a curated sample list. Production would source this from a licensed pharma database (e.g. CIMS, RxNorm-equivalent for Indian brands) and refresh on a schedule, since brand catalogs change and vary by region.",
+    "matching_strategy": "normalize (lowercase, strip dosage strength/form suffixes like '500mg', 'tab', 'inj') then exact match against brand_names; unresolved -> pass through raw value with medicine_type='unmapped_brand_or_generic'"
+  },
+  "medicines": [
+    {"generic_name": "Paracetamol", "drug_class": "antipyretic/analgesic", "brand_names": ["Crocin", "Dolo", "Calpol", "Paracip"]},
+    {"generic_name": "Amoxicillin", "drug_class": "antibiotic", "brand_names": ["Mox", "Novamox", "Wymox"]},
+    {"generic_name": "Ceftriaxone", "drug_class": "antibiotic", "brand_names": ["Monocef", "Cefaxone", "Intacef"]},
+    {"generic_name": "Ondansetron", "drug_class": "antiemetic", "brand_names": ["Emeset", "Vomikind", "Ondem"]},
+    {"generic_name": "Pantoprazole", "drug_class": "PPI/antacid", "brand_names": ["Pan", "Pantocid", "Pantop"]},
+    {"generic_name": "Diclofenac", "drug_class": "NSAID/analgesic", "brand_names": ["Voveran", "Dynapar"]},
+    {"generic_name": "Metronidazole", "drug_class": "antibiotic/antiprotozoal", "brand_names": ["Flagyl", "Metrogyl"]},
+    {"generic_name": "Ringer Lactate", "drug_class": "IV fluid", "brand_names": ["RL", "Ringer's Lactate"]},
+    {"generic_name": "Normal Saline", "drug_class": "IV fluid", "brand_names": ["NS", "0.9% Saline"]},
+    {"generic_name": "Ibuprofen", "drug_class": "NSAID/analgesic", "brand_names": ["Brufen", "Combiflam"]}
+  ]
+}

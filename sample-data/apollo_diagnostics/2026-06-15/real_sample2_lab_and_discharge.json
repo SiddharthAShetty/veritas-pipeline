@@ -1,0 +1,290 @@
+{
+    "traceId": "d6edfe98d7eff4e3eead5c782b06ea3b",
+    "statusCode": 200,
+    "message": [
+        "Success"
+    ],
+    "data": {
+        "responseDetails": [
+            {
+                "classifier": "lab_report",
+                "data": {
+                    "basic_info": {
+                        "uhid": "[UHID-REDACTED]",
+                        "age": "[AGE REDACTED]",
+                        "bill_date": "LAB10945",
+                        "gender": "[GENDER REDACTED]",
+                        "lab_or_hospital_name": "[LAB NAME REDACTED]",
+                        "patient_name": "[PATIENT NAME REDACTED]",
+                        "reports_date": "04-10-2025"
+                    },
+                    "report_details": [
+                        {
+                            "page_no": 0,
+                            "range": "4000-10000",
+                            "result": "9700",
+                            "test_analytics": "normal",
+                            "test_name": "aemoglobin",
+                            "unit": "cell/cu.mm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "4.50-5.50",
+                            "result": "5.45",
+                            "test_analytics": "normal",
+                            "test_name": "tal WBC Count",
+                            "unit": "mil/cu.mm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "36-46",
+                            "result": "44.9",
+                            "test_analytics": "normal",
+                            "test_name": "BC INDICES",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "83-101",
+                            "result": "82",
+                            "test_analytics": "normal",
+                            "test_name": "ematocrit HCT",
+                            "unit": "FL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "31.5-34.5",
+                            "result": "34",
+                            "test_analytics": "normal",
+                            "test_name": "lean Corp Volume MCV",
+                            "unit": "gm/dL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "31.5-34.5",
+                            "result": "34",
+                            "test_analytics": "normal",
+                            "test_name": "lean Corp Hb Conc MCHC",
+                            "unit": "gm/dL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "11.6-14.0",
+                            "result": "14.2",
+                            "test_analytics": "normal",
+                            "test_name": "DW-CV",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "37.0-54.0",
+                            "result": "52.5",
+                            "test_analytics": "normal",
+                            "test_name": "DW-SD",
+                            "unit": "fL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "1.5-4.5",
+                            "result": "1.5-4.5",
+                            "test_analytics": "normal",
+                            "test_name": "lac/cmm",
+                            "unit": "lac/cmm"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "1.31",
+                            "result": "1.31",
+                            "test_analytics": "normal",
+                            "test_name": "atelet Count",
+                            "unit": "atelet Count"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "9.0-13.0",
+                            "result": "9.0-13.0",
+                            "test_analytics": "normal",
+                            "test_name": "latelet Indices",
+                            "unit": "FL"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "14.2",
+                            "result": "16.3",
+                            "test_analytics": "normal",
+                            "test_name": "DW-SD",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "0.17-0.35",
+                            "result": "0.22",
+                            "test_analytics": "normal",
+                            "test_name": "ET",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "40-70",
+                            "result": "72",
+                            "test_analytics": "normal",
+                            "test_name": "LCR",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "20-40",
+                            "result": "22",
+                            "test_analytics": "normal",
+                            "test_name": "eutrophils",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "01-04",
+                            "result": "04",
+                            "test_analytics": "normal",
+                            "test_name": "mphocytes",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "02-08",
+                            "result": "02",
+                            "test_analytics": "normal",
+                            "test_name": "sinophils",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "00-01",
+                            "result": "00",
+                            "test_analytics": "normal",
+                            "test_name": "onocytes",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 0,
+                            "range": "OTE",
+                            "result": "OTE",
+                            "test_analytics": "OTE",
+                            "test_name": "sophils",
+                            "unit": "%"
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "Less than 1:80",
+                            "result": "POSITIVE",
+                            "test_analytics": "",
+                            "test_name": "WIDAL TEST",
+                            "unit": ""
+                        },
+                        {
+                            "page_no": 1,
+                            "range": "= 1 COI - Equivocal",
+                            "result": "NEGATIVE",
+                            "test_analytics": "",
+                            "test_name": "DENGUE NS 1",
+                            "unit": "Od Units"
+                        },
+                        {
+                            "page_no": 2,
+                            "range": "0-6",
+                            "result": "POSITIVE",
+                            "test_analytics": "",
+                            "test_name": "CRP-QUANTITATIVE",
+                            "unit": "mg/L"
+                        },
+                        {
+                            "page_no": 2,
+                            "range": "",
+                            "result": "",
+                            "test_analytics": "",
+                            "test_name": "TYPHI DOT IGG & IGM",
+                            "unit": ""
+                        }
+                    ]
+                },
+                "status": "success",
+                "errorMessage": null,
+                "fileId": null
+            },
+            {
+                "classifier": "discharge_summary",
+                "data": {
+                    "admissionDate": "05-10-2025",
+                    "age": "[AGE REDACTED]",
+                    "briefHistory": "FEVER FROM 4 DAYS , HIGH GRADE FEVER WITH SHIVERING FROM 02 DAY, HEADACHE, VOMITINGS, POOR ORAL INTAKE , pain abdoman, ",
+                    "diagnosis": "ACUTE FEBRILE ILLNESS/ENTERIC FEVER WITH DEHYDRATION",
+                    "dischargeMedications": [
+                        {
+                            "dose": "O-BD",
+                            "frequency": "3 DAYS",
+                            "medicine": "TAB MEDICIP",
+                            "type": null
+                        },
+                        {
+                            "dose": "BD",
+                            "frequency": "3 Days",
+                            "medicine": "CAP. PAN D",
+                            "type": null
+                        },
+                        {
+                            "dose": "SOS",
+                            "frequency": "3 DAYS",
+                            "medicine": "TAB DOLO 650",
+                            "type": null
+                        }
+                    ],
+                    "dischargeDate": "07-Oct-2025",
+                    "doctorName": "[DOCTOR NAME REDACTED]",
+                    "gender": "[GENDER REDACTED]",
+                    "generalExaminations": "CBC, LFT, KFT, BSR, ESR, MONTOX, USG WHOLE ABDOMAN",
+                    "hospitalAddress": "[HOSPITAL ADDRESS REDACTED]",
+                    "hospitalName": "[HOSPITAL NAME REDACTED]",
+                    "medicineInjectionsInvestigation": [
+                        "INJ. MONOCEF 1 GR/ IV 12 HRLY",
+                        "INJ PANTOP 40 MG IV 12 HRLY",
+                        "INJ. EMESET 4 MG IV 02 HRLY",
+                        "INJ PCM 1 GM IV STAT 12HRLY",
+                        "INJ NEURO BION FORTE IV 1 AMP 24HRLY"
+                    ],
+                    "patientName": "[PATIENT NAME REDACTED]",
+                    "postDischargeAdvice": null,
+                    "recommendations": "REVIEW AFTER 03 DAYS/SOS",
+                    "ward": "DELUXE ROOM Unit No :",
+                    "courseDuringHospitalisation": []
+                },
+                "status": "success",
+                "errorMessage": null,
+                "fileId": null
+            }
+        ],
+        "correlationId": "83a229cf9e356cd8ceadda315a07a7ac",
+        "documentId": "DOC01PH00QTWW11HADLU8PNU8VK192",
+        "metaDetails": [
+            {
+                "key": "DestinationIdentifier",
+                "value": "stg-datalake"
+            },
+            {
+                "key": "claim_no",
+                "value": "[CLAIM-REDACTED-565415]"
+            },
+            {
+                "key": "nt_code",
+                "value": "[NT-REDACTED]"
+            },
+            {
+                "key": "source_system",
+                "value": "FASTTRACK"
+            },
+            {
+                "key": "ConsumerClientId",
+                "value": "1075a39f-9b23-68c4-cfeb-1efc31ae3dfd"
+            }
+        ],
+        "status": true,
+        "message": null
+    }
+}

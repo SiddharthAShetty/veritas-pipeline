@@ -1,0 +1,24 @@
+{
+  "report_id": "MP-REP-88213",
+  "visit_id": "MP-VISIT-55210",
+  "patient": {
+    "patient_id": "MP-UHID-9931",
+    "full_name": "[PATIENT NAME REDACTED]",
+    "age_years": 41,
+    "sex": "Female",
+    "lab_name": "MedPlus Labs - Whitefield",
+    "invoice_date": "2026-06-16",
+    "report_date": "2026-06-16"
+  },
+  "tests": [
+    {"test": "Hb", "value": "9.8", "uom": "g/dl", "normal_range": "12.0-15.0", "flag": "L"},
+    {"test": "TOTAL WBC COUNT", "value": "12500", "uom": "cells/cu.mm", "normal_range": "4000-11000", "flag": "H"},
+    {"test": "SODIUM", "value": "138", "uom": "mmol/l", "normal_range": "135-145", "flag": ""},
+    {"test": "POTASSIUM", "value": "4.1", "uom": "mmol/l", "normal_range": "3.5-5.1", "flag": ""},
+    {"test": "CREATININE, SERUM", "value": "1.1", "uom": "mg/dl", "normal_range": "0.6-1.3", "flag": ""},
+    {"test": "PLATELET COUNT", "value": "0.05", "uom": "lakhs/cumm", "normal_range": "1.5-4.5", "flag": "L"},
+    {"test": "C-REACTIVE PROTEIN (CRP)", "value": "45", "uom": "mg/l", "normal_range": "0-10", "flag": "H"},
+    {"test": "URIC ACID, SERUM", "value": "6.1", "uom": "mg/dl", "normal_range": "2.4-7.0", "flag": ""},
+    {"test": "unspecified marker XZ-9", "value": "N/A", "uom": "", "normal_range": "", "flag": ""}
+  ]
+}

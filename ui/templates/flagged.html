@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Flagged Records Queue</h1>
+<p class="subtitle">{{ rows|length }} record(s) needing review, worst-first (Outlier &gt; Invalid &gt; Above/Below Range)</p>
+
+<form class="filter-bar" method="get">
+  <select name="flag" onchange="this.form.submit()">
+    <option value="">All flags</option>
+    {% for f in ['Outlier','Invalid','Above Range','Below Range','Unclassified'] %}
+    <option value="{{ f }}" {{ 'selected' if flag_filter==f }}>{{ f }}</option>
+    {% endfor %}
+  </select>
+  <select name="clinic" onchange="this.form.submit()">
+    <option value="">All clinics</option>
+    {% for c in clinics_list %}
+    <option value="{{ c }}" {{ 'selected' if clinic_filter==c }}>{{ c }}</option>
+    {% endfor %}
+  </select>
+</form>
+
+<div class="card">
+  <table>
+    <tr>
+      <th>Status</th><th>Clinic</th><th>Test</th><th>Original name</th><th>Result</th>
+      <th>Unit</th><th>Range</th><th>Reason</th><th></th>
+    </tr>
+    {% for r in rows %}
+    <tr>
+      <td>
+        {% if r['test_analytics'] in ('Outlier','Invalid','Above Range','Below Range','Unclassified') %}
+        <span class="pill {{ r['test_analytics']|pill_class }}">{{ r['test_analytics'] }}</span>
+        {% endif %}
+      </td>
+      <td>{{ r['clinic_id'] }}</td>
+      <td>{{ r['test_name_canonical'] }}</td>
+      <td class="mono" style="color:var(--text-faint)">{{ r['test_name_original'] }}</td>
+      <td class="mono">{{ r['result_text'] }}</td>
+      <td class="mono">{{ r['unit_canonical'] or '' }}</td>
+      <td class="mono">{{ (r['range_low']|string + '-' + r['range_high']|string) if r['range_low'] is not none else '' }}</td>
+      <td style="color:var(--text-faint); font-size:12px;">{{ r['flag_reason'] or '' }}</td>
+      <td><a href="/records/{{ r['document_id'] }}">inspect &rarr;</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% if not rows %}<p class="subtitle" style="padding:20px;">Nothing flagged for this filter.</p>{% endif %}
+</div>
+{% endblock %}

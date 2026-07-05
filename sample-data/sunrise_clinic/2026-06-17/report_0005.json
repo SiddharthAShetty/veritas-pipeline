@@ -1,0 +1,18 @@
+{
+  "traceId": "sc99887766554433221100ffeeddccbb",
+  "statusCode": 200,
+  "data": {
+    "documentId": "DOC03SC0011223344",
+    "correlationId": "sc5566778899",
+    "responseDetails": [
+      {
+        "classifier": "lab_report",
+        "data": {
+          "basic_info": {"uhid": "[UHID-REDACTED]", "age": "45", "gender": "M"
+          "report_details": [
+            {"test_name": "Haemoglobin", "result": "13.2", "unit": "g/dl", "range": "13.0-17.0"}
+          ]
+        }
+      }
+    ]
+  }

@@ -11,7 +11,8 @@ non-obvious design decision.
 ## Setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python -m venv .venv 
+venv\Script\activate
 pip install -r requirements.txt
 ```
 

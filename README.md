@@ -8,6 +8,10 @@ Built for the Veritas Claims Analytics take-home assignment. See `docs/architect
 for the solution architecture and `docs/assumptions.md` for the reasoning behind every
 non-obvious design decision.
 
+## Live Demo
+
+🌐 **https://veritas-pipeline.onrender.com/**
+
 ## Setup
 
 ```bash

@@ -8,6 +8,8 @@ requires only a config change" (Deliverable 3.2 evaluation criterion) true
 in practice: every field lookup here goes through the clinic config, not
 a clinic-specific branch of code.
 """
+
+import json
 import logging
 import re
 import uuid
@@ -103,6 +105,7 @@ class StandardisationPipeline:
             "file_gcs_path": record.file_path,
             "ingested_at": record.ingested_at,
             "processed_at": datetime.now(timezone.utc).isoformat(),
+            "metadetails": json.dumps(meta) if meta else None,
         }
 
     # -----------------------------------------------------------------
@@ -130,6 +133,8 @@ class StandardisationPipeline:
             "bill_date": normalize_date(demo_root.get(dmap.get("bill_date")) if isinstance(demo_root, dict) else None, date_fmt),
             "reports_date": normalize_date(demo_root.get(dmap.get("reports_date")) if isinstance(demo_root, dict) else None, date_fmt),
             **{f"age_{k}" if k != "age_text" else k: v for k, v in age_norm.items()},
+            "lab_or_hospital_name": demo_root.get("lab_or_hospital_name") if isinstance(demo_root, dict) else None,
+            "report_date": demo_root.get(dmap.get("reports_date")) if isinstance(demo_root, dict) else None,
         }
 
         rows_path = spec.get("rows_path")
@@ -166,6 +171,8 @@ class StandardisationPipeline:
                     unit_raw,
                     range_raw,
                     page_no,
+                    result_text_original=result_raw, 
+                    range_text_original=range_raw
                 )
                 if test_row is not None:
                     out_rows.append(test_row)
@@ -207,7 +214,7 @@ class StandardisationPipeline:
 
     def _build_test_row(self, record: RawRecord, demographics: Dict[str, Any],
                      test_name_raw: str, result_raw: Any, unit_raw: Any,
-                     range_raw: Any, page_no: Any) -> Optional[Dict[str, Any]]:
+                     range_raw: Any, page_no: Any, result_text_original=None, range_text_original=None) -> Optional[Dict[str, Any]]:
         canonical, method, confidence = self.test_matcher.match(str(test_name_raw))
         value_type = self.test_matcher.value_type_for(canonical) if canonical else "text"
         numeric_result = parse_numeric_result(result_raw)
@@ -256,6 +263,8 @@ class StandardisationPipeline:
             "normalization_method": method,
             "normalization_confidence": confidence,
             "page_number": page_no,
+            "result_text_original": str(result_text_original) if result_text_original is not None else None,
+            "range_text_original": range_text_original,
         })
         if canonical is None:
             self.row_errors.append(RowError(
@@ -295,6 +304,8 @@ class StandardisationPipeline:
             "course_during_hospitalisation": root.get(fmap.get("course_during_hospitalisation")),
             "recommendations": root.get(fmap.get("recommendations")),
             "post_discharge_advice": root.get(fmap.get("post_discharge_advice")),
+            "medicine_injections_investigation": root.get(fmap.get("medicine_injections_investigation")),
+            "other_med_inj_investigations": root.get(fmap.get("medicine_injections_investigation")),
             **{f"age_{k}" if k != "age_text" else k: v for k, v in age_norm.items()},
         })
         out = [row]
@@ -306,17 +317,20 @@ class StandardisationPipeline:
             if not isinstance(med, dict):
                 continue
             raw_name = med.get(mmap.get("medicine"))
+            raw_dose = med.get(mmap.get("dose"))
+            raw_frequency = med.get(mmap.get("frequency"))
             match = self.medicine_matcher.match(raw_name)
             med_row = self._base_fields(record)
             med_row.update({
                 "record_type": "medication",
                 "patient_name": root.get(fmap.get("patient_name")),
-                "medicine": match["medicine_name"],
-                "generic_name": match["generic_name"],
-                "drug_class": match["drug_class"],
-                "medicine_type": match["medicine_type"],
-                "dose": med.get(mmap.get("dose")),
-                "frequency": med.get(mmap.get("frequency")),
+                "medicine": match["medicine_name"], "generic_name": match["generic_name"],
+                "drug_class": match["drug_class"], "medicine_type": match["medicine_type"],
+                "dose": raw_dose, "frequency": raw_frequency,
+                "medication_name": match["medicine_name"], "medication_medicine": raw_name,
+                "medication_dose": raw_dose, "medication_frequency": raw_frequency,
+                "discharge_medications_medicine": raw_name, "discharge_medications_dose": raw_dose,
+                "discharge_medications_frequency": raw_frequency,
             })
             out.append(med_row)
         return out

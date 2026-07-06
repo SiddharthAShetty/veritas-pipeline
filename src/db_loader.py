@@ -28,21 +28,99 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
 CANONICAL_COLUMNS = [
-    "id", "document_id", "correlation_id", "trace_id", "clinic_id", "source_system",
-    "source_system_reported", "claim_no", "nt_code", "consumer_client_id", "destination_identifier",
-    "file_gcs_path", "record_type",
-    "patient_name", "uhid", "gender", "age_text", "age_years", "age_months", "age_days",
-    "hospital_name", "hospital_address", "doctor_name", "ward",
-    "bill_date", "reports_date", "admission_date", "discharge_date",
-    "test_name_canonical", "test_name_original", "result_value", "result_text",
-    "unit_canonical", "unit_original", "range_low", "range_high", "range_text", "range_source",
-    "test_analytics", "flag_reason", "normalization_method", "normalization_confidence",
+    # Metadata
+    "id", "document_id", "correlation_id", "trace_id",
+    "clinic_id", "source_system", "source_system_reported",
+    "claim_no", "nt_code", "consumer_client_id",
+    "destination_identifier", "file_gcs_path", "record_type",
+    "metadetails",
+
+    # Patient Information
+    "patient_name", "uhid",
+    "gender",
+    "age_text", "age",
+    "age_years", "age_months", "age_days",
+    "basic_info_age",
+
+    # Hospital Information
+    "hospital_name", "lab_or_hospital_name",
+    "hospital_address", "doctor_name", "ward",
+
+    # Dates
+    "bill_date", "basic_info_bill_date",
+    "reports_date", "report_date",
+    "admission_date", "discharge_date",
+
+    # Test Details
+    "test_name_canonical",
+    "test_name_original",
+    "test_name",
+    "report_details_test_name",
+
+    "result_value",
+    "result_text",
+    "result",
+    "result_text_original",
+    "report_details_result",
+
+    "unit_canonical",
+    "unit_original",
+    "unit",
+    "report_details_unit",
+
+    "range_low",
+    "range_high",
+    "range_text",
+    "range",
+    "range_text_original",
+    "report_details_range",
+    "range_source",
+
+    # Analytics
+    "test_analytics",
+    "report_details_test_analytics",
+    "flag_reason",
+    "normalization_method",
+    "normalization_confidence",
     "duplicate_within_report",
+
+    # Page Information
     "page_number",
-    "diagnosis", "brief_history", "general_examinations", "course_during_hospitalisation",
-    "recommendations", "post_discharge_advice",
-    "medicine", "generic_name", "drug_class", "medicine_type", "dose", "frequency",
-    "ingested_at", "processed_at",
+    "page_no",
+    "report_details_page_no",
+
+    # Clinical Notes
+    "diagnosis",
+    "brief_history",
+    "general_examinations",
+    "course_during_hospitalisation",
+    "course_during_hospitalization",  # American spelling
+    "recommendations",
+    "post_discharge_advice",
+
+    # Medicines
+    "medicine",
+    "medication_name",
+    "medication_medicine",
+    "generic_name",
+    "drug_class",
+    "medicine_type",
+
+    "dose",
+    "medication_dose",
+    "discharge_medications_dose",
+
+    "frequency",
+    "medication_frequency",
+    "discharge_medications_frequency",
+
+    "discharge_medications_medicine",
+    "medicine_injections_investigation",
+    "other_med_inj_investigations",
+
+    # Timestamps
+    "ingested_at",
+    "processed_at",
 ]
 
 _TYPE_OVERRIDES = {
@@ -84,12 +162,20 @@ class SQLiteLoader:
         self.conn = sqlite3.connect(db_path)
         self._create_schema()
 
+    def _add_missing_columns(self, table: str, expected_columns: Dict[str, str]):
+        existing = {row[1] for row in self.conn.execute(f"PRAGMA table_info({table})")}
+        for col, col_type in expected_columns.items():
+            if col not in existing:
+                self.conn.execute(f'ALTER TABLE {table} ADD COLUMN "{col}" {col_type}')
+
     def _create_schema(self):
         cols_sql = ", ".join(
             f'"{c}" {_TYPE_OVERRIDES.get(c, "TEXT")}' for c in CANONICAL_COLUMNS
         )
         self.conn.execute(f"CREATE TABLE IF NOT EXISTS clinical_records ({cols_sql}, PRIMARY KEY (id))")
-
+        self._add_missing_columns("clinical_records", {
+            c: _TYPE_OVERRIDES.get(c, "TEXT") for c in CANONICAL_COLUMNS
+        })
         self.conn.execute("""
             CREATE TABLE IF NOT EXISTS pipeline_runs (
                 run_id TEXT PRIMARY KEY, started_at TEXT, finished_at TEXT,
@@ -105,6 +191,12 @@ class SQLiteLoader:
                 within_report_duplicate_rows INTEGER
             )
         """)
+        self._add_missing_columns("clinic_quality_stats", {
+            "files_seen": "INTEGER", "files_failed": "INTEGER",
+            "duplicates_suppressed": "INTEGER", "rows_loaded": "INTEGER",
+            "unresolved_test_names": "INTEGER", "invalid_rows": "INTEGER",
+            "outlier_rows": "INTEGER", "within_report_duplicate_rows": "INTEGER",
+        })
 
         # FR-2.2: "For each defined test, produce exactly 5 columns: Test_Name,
         # Test_Name_Result, Test_Name_Range, Test_Name_Unit, Test_Name_Analytics.

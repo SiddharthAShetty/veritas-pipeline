@@ -14,7 +14,7 @@ See `docs/architecture.md` for the solution architecture and `docs/assumptions.m
 
 ```bash
 python -m venv .venv 
-venv\Script\activate
+venv\Scripts\activate
 pip install -r requirements.txt
 ```
 

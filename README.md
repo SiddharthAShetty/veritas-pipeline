@@ -4,9 +4,7 @@ A config-driven prototype that ingests messy, clinic-specific JSON medical repor
 standardises them into a canonical schema, validates results against reference ranges,
 loads them into a database, and surfaces everything through a small operational UI.
 
-Built for the Veritas Claims Analytics take-home assignment. See `docs/architecture.md`
-for the solution architecture and `docs/assumptions.md` for the reasoning behind every
-non-obvious design decision.
+See `docs/architecture.md` for the solution architecture and `docs/assumptions.md` for the reasoning behind every non-obvious design decision.
 
 ## Live Demo
 
